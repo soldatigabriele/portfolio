@@ -41,7 +41,7 @@
         <div class="title">Who am I</div>
         <p>I am a back-end developer graduate of Internet Technology</p>
         <p>I like to challenge myself and I love to learn!</p>
-
+I think I should add some new text here...
     </div>
     <span id="index_about"></span>
 
