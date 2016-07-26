@@ -88,7 +88,7 @@
 
     <div class="image" id="wall_flickr" data-stellar-background-ratio="0.2"></div>
     <div class="content" id="content_flickr">
-        <div class="title">Flickr</div>
+        <div class="title">Flickr APIs</div>
         <div class="col-md-12 imageThumbnail">
             <?php
                         $image = new Flickr();
@@ -131,6 +131,6 @@
     <!--        <div class="title">Photoshop</div>-->
     <!--    </div>-->
 </div>
-
+<script src="include/scripts/scripts.js"></script>
 </body>
 </html>
