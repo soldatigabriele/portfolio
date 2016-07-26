@@ -41,7 +41,7 @@
         <div class="title">Who am I</div>
         <p>I am a back-end developer graduate of Internet Technology</p>
         <p>I like to challenge myself and I love to learn!</p>
-
+I think I should add some new text here...
     </div>
     <span id="index_about"></span>
 
@@ -88,7 +88,7 @@
 
     <div class="image" id="wall_flickr" data-stellar-background-ratio="0.2"></div>
     <div class="content" id="content_flickr">
-        <div class="title">Flickr</div>
+        <div class="title">Flickr APIs</div>
         <div class="col-md-12 imageThumbnail">
             <?php
                         $image = new Flickr();
@@ -131,73 +131,6 @@
     <!--        <div class="title">Photoshop</div>-->
     <!--    </div>-->
 </div>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("img.imgFade").mouseover(function () {
-            $(this).fadeTo(300, 1);
-        });
-        $("img.imgFade").mouseout(function () {
-            $(this).fadeTo(300, 0.5);
-        });
-
-//      Flickr images opacity
-        $(".flickrImg").mouseover(function () {
-            $(this).fadeTo(300, 1);
-        });
-        $(".flickrImg").mouseout(function () {
-            $(this).fadeTo(300, 0.7);
-        });
-
-    });
-</script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        setBindings();
-    });
-
-    function setBindings() {
-        $('nav a').click(function (e) {
-//            prevents the default animation
-            e.preventDefault();
-            var contentId = "index_" + e.currentTarget.id;
-//            alert(contentId);
-            $('html,body').animate({
-                scrollTop: $("#" + contentId).offset().top
-            }, 1200);
-
-        })
-    }
-</script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        var n = 1;
-        $('#slide' + n).appear();
-        $('#slide' + n).on('appear', function () {
-            function removeClass() {
-                if ($('#slide' + n).hasClass('transparent')) {
-                    $("#slide" + n).mouseover(function(){$(this).fadeTo(300,0.9);});
-                    $("#slide" + n).mouseout(function(){$(this).fadeTo(300,1);});
-                    $("#slide" + n).delay(n + 0).fadeTo(20, 1);
-                    n = n + 1;
-                }
-            }
-            removeClass(n);
-        });
-        function resize(id) {
-            var factor = 2;
-            $(id).animate({
-                top: '-=' + $(id).height() / factor,
-                left: '-=' + $(id).width() / factor,
-                width: $(id).width() * factor
-            });
-        }
-
-        $("#content_web img").mouseover(function () {
-            resize($(this).attr("id"));
-        });
-
-    })
-    ;
-</script>
+<script src="include/scripts/scripts.js"></script>
 </body>
 </html>
