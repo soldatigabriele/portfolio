@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" type="text/css" href="include/style/stylesheet.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-
     <script src="include/autoscroll/animatescroll.js"></script>
     <script src="include/jQuery/jquery-1.12.4.js"></script>
     <script src="include/stellar/jquery.stellar.js"></script>
@@ -21,148 +20,7 @@
             $(window).stellar();
         });
     </script>
-    <style>
-        body {
-            font-weight: 100;
-            font-family: 'Lato';
-        }
 
-        .flickrImg {
-            opacity: 0.7;
-        }
-
-        p {
-            font-size: 26px;
-        }
-
-        .image {
-            height: 250px;
-            width: 100%;
-        }
-
-        .page {
-            margin-top: 50px;
-        }
-
-        .header {
-            height: 50px;
-            background: white;
-            width: 100%;
-            top: 0px;
-            position: fixed;
-            margin: 0px auto;
-            font-size: 26px;
-            text-align: center;
-            z-index: 1;
-        }
-
-        .firstImage {
-            height: 100vh;
-            width: 100%;
-            background: white;
-        }
-
-        .title {
-            font-size: 64px;
-        }
-
-        .content {
-            width: 100%;
-            /*background: white;*/
-            text-align: center;
-            display: inline-block;
-            padding: 25px 100px 0px 100px;
-
-        }
-
-        .description {
-            vertical-align: middle;
-            margin-top: 10%;
-            margin-left: auto;
-            margin-right: auto;
-
-        }
-
-        #content_frameworks {
-            height: 100vh;
-        }
-
-        #content_about {
-            height: 100vh;
-        }
-
-        /*#content_hobbies{*/
-        /*height:700px;*/
-        /*background-image: url('img/10.jpg');*/
-        /*background-position: center;*/
-        /*background-size: 100%;*/
-        /*position: relative;*/
-        /*}*/
-        #content_web {
-            height: 100vh;
-            font-size: 24px;
-        }
-
-        #content_flickr {
-            height: 60vh;
-        }
-
-        #content_contacts {
-            background: black;
-            font-size: 20px;
-            color: white;
-            height: 100px;
-            /*padding-top:30px;*/
-        }
-
-        .copyright {
-            padding-top: 20px;
-            font-size: 12px;
-        }
-
-        .img {
-            width: 100px;
-        }
-
-        .img-circle {
-            width: 100px;
-            htight: 100px;
-        }
-
-        /*Flickr images*/
-        .imageThumbnail {
-            margin-top: 20px;
-        }
-
-        .transparent {
-            opacity: 0.1;
-        }
-
-        /* set the wall images */
-        #wall_about {
-            background: url('img/7.jpg');
-            background-size: 100%;
-            background-attachment: fixed;
-        }
-
-        #wall_frameworks {
-            background: url('img/4.jpg');
-            background-size: 100%;
-            background-attachment: fixed;
-        }
-
-        #wall_web {
-            background: url('img/13.jpg');
-            background-size: 100%;
-            background-attachment: fixed;
-        }
-
-        #wall_flickr {
-            background: url('img/14.jpg');
-            background-size: 100%;
-            background-attachment: fixed;
-        }
-    </style>
 </head>
 <body>
 <?php include('include/init.php'); ?>
