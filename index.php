@@ -223,9 +223,8 @@
     <div class="image" id="wall_frameworks" data-stellar-background-ratio="0.2"></div>
     <div class="content" id="content_frameworks">
         <div class="title">Laravel 5</div>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid amet cupiditate doloremque, dolores,
-            dolorum ducimus eveniet minima nam nemo obcaecati odit quas quasi rem, repudiandae sunt suscipit temporibus
-            vel?</p>
+        <p>Laravel is my favourite PHP Framework!</p>
+        <p>It makes everything easier and faster!</p>
     </div>
     <span id="index_frameworks"></span>
 
