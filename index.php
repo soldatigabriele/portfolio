@@ -233,8 +233,8 @@
         <div class="title">Flickr</div>
         <div class="col-md-12 imageThumbnail">
             <?php
-            //            $image = new Flickr();
-            //            $image->getImage();
+                        $image = new Flickr();
+                        $image->getImage();
             ?>
         </div>
     </div>
