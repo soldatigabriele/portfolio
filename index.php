@@ -41,7 +41,6 @@
         <div class="title">Who am I</div>
         <p>I am a back-end developer graduate of Internet Technology</p>
         <p>I like to challenge myself and I love to learn!</p>
-I think I should add some new text here...
     </div>
     <span id="index_about"></span>
 
@@ -52,8 +51,6 @@ I think I should add some new text here...
             <p>Strong PHP and OOP coding skills</p>
             <p>I like to code in Javascript, NodeJS and jQuery</p>
             <p>I love GITHUB and VIM too!</p>
-            and here too...
-            prova
         </div>
         <div style="position:relative;margin-top: 30%;">
             <div class="col-md-10 col-md-offset-1" style="padding-bottom:30px;bottom:0px;position:absolute;">
@@ -93,8 +90,8 @@ I think I should add some new text here...
         <div class="title">Flickr APIs</div>
         <div class="col-md-12 imageThumbnail">
             <?php
-                        $image = new Flickr();
-                        $image->getImage();
+            $image = new Flickr();
+            $image->getImage();
             ?>
         </div>
     </div>
@@ -105,17 +102,26 @@ I think I should add some new text here...
         <div class="col-md-12">
             <div class="col-md-4">soldati.gabriele@gmail.com</div>
             <div class="col-md-4">
-                <div class="col-md-1 col-md-offset-4">
-                    <a href="https://www.facebook.com/gbrlit"><img src="img/cont_facebook.png" width="20px" alt=""></a>
-                </div>
-                <div class="col-md-1">
-                    <a href="https://www.instagram.com/gabrielesoldati/"><img src="img/cont_instagram.png" width="20px"
-                                                                              height="20px" alt=""></a>
-                </div>
-                <div class="col-md-1">
-                    <a href="https://www.linkedin.com/in/gabriele-soldati-4a3992aa?trk=nav_responsive_tab_profile_pic"><img
-                            src="img/cont_linkedin.png" width="20px" alt=""></a>
-                </div>
+                <a href="https://www.facebook.com/gbrlit">
+                    <div class="col-md-1 col-md-offset-4">
+                        <img src="img/cont_facebook.png" width="20px" alt="">
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/gabrielesoldati/">
+                    <div class="col-md-1">
+                        <img src="img/cont_instagram.png" width="20px" height="20px" alt="">
+                    </div>
+                </a>
+                <a href="http://https://github.com/soldatigabriele">
+                    <div class="col-md-1">
+                        <img src="img/githubW.png" width="20px" alt="">
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/gabriele-soldati-4a3992aa?trk=nav_responsive_tab_profile_pic">
+                    <div class="col-md-1">
+                        <img src="img/cont_linkedin.png" width="20px" alt="">
+                    </div>
+                </a>
             </div>
             <div class="col-md-4">113, Newton Street - Manchester UK</div>
             <div class="col-md-12 copyright">© 2016 Gabriele Soldati. All rights reserved.</div>
