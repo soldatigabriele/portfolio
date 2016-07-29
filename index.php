@@ -49,7 +49,7 @@
         <div class="title">WEB DEVELOPMENT</div>
         <div class="description">
             <p>Strong PHP and OOP coding skills</p>
-            <p>I like to code in Javascript, NodeJS and jQuery</p>
+            <p>I also like to code in Javascript, NodeJS and jQuery</p>
             <p>I love GITHUB and VIM too!</p>
         </div>
         <div style="position:relative;margin-top: 30%;">
@@ -88,6 +88,7 @@
     <div class="image" id="wall_flickr" data-stellar-background-ratio="0.2"></div>
     <div class="content" id="content_flickr">
         <div class="title">Flickr APIs</div>
+        <p>Flickr's APIs are awesome!</p>
         <div class="col-md-12 imageThumbnail">
             <?php
             $image = new Flickr();
@@ -95,7 +96,7 @@
             ?>
         </div>
     </div>
-    <span id="index_flickr"></span>
+<!--    <span id="index_flickr"></span>-->
 
     <div class="image" id="wall_contacts" data-stellar-background-ratio="0.2"></div>
     <div class="content" id="content_contacts" style="margin-top: 20px">
