@@ -30,8 +30,8 @@ class Flickr{
             $imgArray[] = $img;
         }
 //        print the images
-        for($i=1;$i<=12;$i++) {
-            echo '<div class="col-md-3 ">';
+        for($i=1;$i<=24;$i++) {
+            echo '<div class="col-lg-3 ">';
             echo '<img class="flickrImg" src="' . $imgArray[$i] . '" width="230px" height="150px">';
             echo '</div>';
 //            prints a white space

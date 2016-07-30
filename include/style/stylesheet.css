@@ -97,6 +97,15 @@ p {
     position:relative;
     margin-top: 30%;
 }
+/*responsive images*/
+@media only screen and (max-width: 1000px){
+    .images{
+        display:none;
+    }
+}
+@media only screen and (max-width: 1150px){
+    .
+}
 .copyright {
     padding-top: 20px;
     font-size: 12px;
