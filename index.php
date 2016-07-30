@@ -52,26 +52,14 @@
             <p>I also like to code in Javascript, NodeJS and jQuery</p>
             <p>I love GITHUB and VIM too!</p>
         </div>
-        <div style="position:relative;margin-top: 30%;">
+        <div class="images">
             <div class="col-md-10 col-md-offset-1" style="padding-bottom:30px;bottom:0px;position:absolute;">
-                <div class="col-md-2 transparent" id="slide1"><img class="img-circle" id="img1" src="img/php.png"
-                                                                   alt="Circle image">
-                </div>
-                <div class="col-md-2 transparent" id="slide2"><img class="img" id="img2" src="img/mysql.png"
-                                                                   alt="Circle image">
-                </div>
-                <div class="col-md-2 transparent" id="slide3"><img class="img" id="img3" src="img/github.png"
-                                                                   alt="Circle image">
-                </div>
-                <div class="col-md-2 transparent" id="slide4"><img class="img" id="img4" src="img/nodejs.png"
-                                                                   alt="Circle image">
-                </div>
-                <div class="col-md-2 transparent" id="slide5"><img class="img" id="img5" src="img/js.jpg"
-                                                                   alt="Circle image">
-                </div>
-                <div class="col-md-2 transparent" id="slide6"><img class="img" id="img6" src="img/jquery.png"
-                                                                   alt="Circle image">
-                </div>
+                <div class="col-md-2 transparent" id="slide1"><img class="img-circle" id="img1" src="img/php.png" alt="Circle image"> </div>
+                <div class="col-md-2 transparent" id="slide2"><img class="img" id="img2" src="img/mysql.png" alt="Circle image"> </div>
+                <div class="col-md-2 transparent" id="slide3"><img class="img" id="img3" src="img/githubB.png" alt="Circle image"> </div>
+                <div class="col-md-2 transparent" id="slide4"><img class="img" id="img5" src="img/js.jpg" alt="Circle image"> </div>
+                <div class="col-md-2 transparent" id="slide5"><img class="img" id="img4" src="img/nodejs.png" alt="Circle image"> </div>
+                <div class="col-md-2 transparent" id="slide6"><img class="img" id="img6" src="img/jquery.png" alt="Circle image"> </div>
             </div>
         </div>
     </div>
@@ -96,9 +84,9 @@
             ?>
         </div>
     </div>
-<!--    <span id="index_flickr"></span>-->
+    <!--    <span id="index_flickr"></span>-->
 
-   <span id="index_contacts"></span>
+    <span id="index_contacts"></span>
 
     <!--    <div class="image" id="wall_hobbies" data-stellar-background-ratio=""></div>-->
     <!--    <div class="" id="content_hobbies">-->
@@ -109,33 +97,33 @@
     <!--    <div class="content" id="content_web">-->
     <!--        <div class="title">Photoshop</div>-->
     <!--    </div>-->
-<!--    <div class="image" id="wall_contacts" data-stellar-background-ratio="0.2"></div>-->
+    <!--    <div class="image" id="wall_contacts" data-stellar-background-ratio="0.2"></div>-->
     <div class="content col-md-12" id="content_contacts">
-            <div class="col-md-4">soldati.gabriele@gmail.com</div>
-            <div class="col-md-4">
-                <a href="https://www.facebook.com/gbrlit">
-                    <div class="col-md-1 col-md-offset-4">
-                        <img src="img/cont_facebook.png" width="20px" alt="">
-                    </div>
-                </a>
-                <a href="https://www.instagram.com/gabrielesoldati/">
-                    <div class="col-md-1">
-                        <img src="img/cont_instagram.png" width="20px" height="20px" alt="">
-                    </div>
-                </a>
-                <a href="http://https://github.com/soldatigabriele">
-                    <div class="col-md-1">
-                        <img src="img/githubW.png" width="20px" alt="">
-                    </div>
-                </a>
-                <a href="https://www.linkedin.com/in/gabriele-soldati-4a3992aa?trk=nav_responsive_tab_profile_pic">
-                    <div class="col-md-1">
-                        <img src="img/cont_linkedin.png" width="20px" alt="">
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4">113, Newton Street - Manchester UK</div>
-            <div class="col-md-12 copyright">© 2016 Gabriele Soldati. All rights reserved.</div>
+        <div class="col-md-4">soldati.gabriele@gmail.com</div>
+        <div class="col-md-4">
+            <a href="https://www.facebook.com/gbrlit">
+                <div class="col-md-1 col-md-offset-4">
+                    <img src="img/cont_facebook.png" width="20px" alt="">
+                </div>
+            </a>
+            <a href="https://www.instagram.com/gabrielesoldati/">
+                <div class="col-md-1">
+                    <img src="img/cont_instagram.png" width="20px" height="20px" alt="">
+                </div>
+            </a>
+            <a href="http://https://github.com/soldatigabriele">
+                <div class="col-md-1">
+                    <img src="img/githubW.png" width="20px" alt="">
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/gabriele-soldati-4a3992aa?trk=nav_responsive_tab_profile_pic">
+                <div class="col-md-1">
+                    <img src="img/cont_linkedin.png" width="20px" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">113, Newton Street - Manchester UK</div>
+        <div class="col-md-12 copyright">© 2016 Gabriele Soldati. All rights reserved.</div>
     </div>
 </div>
 

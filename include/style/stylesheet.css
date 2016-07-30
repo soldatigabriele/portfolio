@@ -93,7 +93,10 @@ p {
     /*padding-top:30px;*/
     /*bottom: 0px;*/
 }
-
+.images{
+    position:relative;
+    margin-top: 30%;
+}
 .copyright {
     padding-top: 20px;
     font-size: 12px;
@@ -122,22 +125,26 @@ p {
     background: url('../../img/7.jpg');
     background-size: 100%;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 #wall_frameworks {
     background: url('../../img/4.jpg');
     background-size: 100%;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 #wall_web {
     background: url('../../img/13.jpg');
     background-size: 100%;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 #wall_flickr {
     background: url('../../img/14.jpg');
     background-size: 100%;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
