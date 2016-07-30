@@ -87,7 +87,7 @@
 
     <div class="image" id="wall_flickr" data-stellar-background-ratio="0.2"></div>
     <div class="content" id="content_flickr">
-        <div class="title">Flickr APIs</div>
+        <div class="title">Flickr</div>
         <p>Flickr's APIs are awesome!</p>
         <div class="col-md-12 imageThumbnail">
             <?php
@@ -98,9 +98,19 @@
     </div>
 <!--    <span id="index_flickr"></span>-->
 
-    <div class="image" id="wall_contacts" data-stellar-background-ratio="0.2"></div>
-    <div class="content" id="content_contacts" style="margin-top: 20px">
-        <div class="col-md-12">
+   <span id="index_contacts"></span>
+
+    <!--    <div class="image" id="wall_hobbies" data-stellar-background-ratio=""></div>-->
+    <!--    <div class="" id="content_hobbies">-->
+    <!--        <div class="photoshop">Photoshop</div>-->
+    <!--    </div>-->
+
+    <!--    <div class="image" id="wall_web" data-stellar-background-ratio="0.5"></div>-->
+    <!--    <div class="content" id="content_web">-->
+    <!--        <div class="title">Photoshop</div>-->
+    <!--    </div>-->
+<!--    <div class="image" id="wall_contacts" data-stellar-background-ratio="0.2"></div>-->
+    <div class="content col-md-12" id="content_contacts">
             <div class="col-md-4">soldati.gabriele@gmail.com</div>
             <div class="col-md-4">
                 <a href="https://www.facebook.com/gbrlit">
@@ -126,20 +136,9 @@
             </div>
             <div class="col-md-4">113, Newton Street - Manchester UK</div>
             <div class="col-md-12 copyright">© 2016 Gabriele Soldati. All rights reserved.</div>
-        </div>
     </div>
-    <span id="index_contacts"></span>
-
-    <!--    <div class="image" id="wall_hobbies" data-stellar-background-ratio=""></div>-->
-    <!--    <div class="" id="content_hobbies">-->
-    <!--        <div class="photoshop">Photoshop</div>-->
-    <!--    </div>-->
-
-    <!--    <div class="image" id="wall_web" data-stellar-background-ratio="0.5"></div>-->
-    <!--    <div class="content" id="content_web">-->
-    <!--        <div class="title">Photoshop</div>-->
-    <!--    </div>-->
 </div>
+
 <script src="include/scripts/scripts.js"></script>
 </body>
 </html>
