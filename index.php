@@ -84,7 +84,7 @@
             ?>
         </div>
     </div>
-    <!--    <span id="index_flickr"></span>-->
+        <span id="index_flickr"></span>
 
     <span id="index_contacts"></span>
 
