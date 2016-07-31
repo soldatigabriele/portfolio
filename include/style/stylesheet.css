@@ -21,9 +21,14 @@ p {
     padding-bottom:0px;
 }
 
+a:link{color:lightslategray;text-decoration:none;outline:0;}
+a:hover{ color:lightslategray; text-decoration:none;}
+a:visited{color:lightslategray;}
+a:active{color:lightslategray;text-decoration:none;}
 .header {
     height: 50px;
     background: white;
+    color:lightslategray;
     width: 100%;
     top: 0px;
     position: fixed;
