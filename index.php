@@ -4,17 +4,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width"/>
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="include/style/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="include/css/stylesheet.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="include/autoscroll/animatescroll.js"></script>
     <script src="include/jQuery/jquery-1.12.4.js"></script>
     <script src="include/stellar/jquery.stellar.js"></script>
+    <!--    grid image css -->
+    <link rel="stylesheet" type="text/css" href="include/css/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="include/css/style.css"/>
+    <script type="text/javascript" src="include/gridImagesJs/modernizr.custom.26633.js"></script>
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="css/fallback.css"/>
+    </noscript>
     <script src="include/jquery.appear/jquery.appear.js"></script>
+    <!--    end image Grid css  -->
     <!--    inizialize parallax effect-->
     <script>
         $(document).ready(function () {
@@ -56,12 +64,18 @@
         </div>
         <div class="images">
             <div class="col-md-10 col-md-offset-1" style="padding-bottom:30px;bottom:0px;position:absolute;">
-                <div class="col-md-2 transparent" id="slide1"><img class="img-circle" id="img1" src="img/php.png" alt="Circle image"> </div>
-                <div class="col-md-2 transparent" id="slide2"><img class="img" id="img2" src="img/mysql.png" alt="Circle image"> </div>
-                <div class="col-md-2 transparent" id="slide3"><img class="img" id="img3" src="img/githubB.png" alt="Circle image"> </div>
-                <div class="col-md-2 transparent" id="slide4"><img class="img" id="img5" src="img/js.jpg" alt="Circle image"> </div>
-                <div class="col-md-2 transparent" id="slide5"><img class="img" id="img4" src="img/nodejs.png" alt="Circle image"> </div>
-                <div class="col-md-2 transparent" id="slide6"><img class="img" id="img6" src="img/jquery.png" alt="Circle image"> </div>
+                <div class="col-md-2 transparent" id="slide1"><img class="img-circle" id="img1" src="img/php.png"
+                                                                   alt="Circle image"></div>
+                <div class="col-md-2 transparent" id="slide2"><img class="img" id="img2" src="img/mysql.png"
+                                                                   alt="Circle image"></div>
+                <div class="col-md-2 transparent" id="slide3"><img class="img" id="img3" src="img/githubB.png"
+                                                                   alt="Circle image"></div>
+                <div class="col-md-2 transparent" id="slide4"><img class="img" id="img5" src="img/js.jpg"
+                                                                   alt="Circle image"></div>
+                <div class="col-md-2 transparent" id="slide5"><img class="img" id="img4" src="img/nodejs.png"
+                                                                   alt="Circle image"></div>
+                <div class="col-md-2 transparent" id="slide6"><img class="img" id="img6" src="img/jquery.png"
+                                                                   alt="Circle image"></div>
             </div>
         </div>
     </div>
@@ -79,17 +93,18 @@
     <div class="content" id="content_works">
         <div class="title">Previous Works</div>
         <br><br>
-        <div class="col-md-12" >
-            <div class="col-md-4 col-md-offset-1 workImage"><img src="img/vault.jpg" alt="" height="" width="300px"></div>
+        <div class="col-md-12">
+            <div class="col-md-4 col-md-offset-1 workImage"><img src="img/vault.jpg" alt="" height="" width="300px">
+            </div>
             <div class="col-md-4 col-md-offset-2 workImage"><img src="img/laboa.png" alt="" width="300px"></div>
             <div class="col-md-4 col-md-offset-1"><p>ImageVault</p></div>
             <div class="col-md-4 col-md-offset-2"><p>Laboa.org</p></div>
             <div class="col-md-12" style="">
-            <br>
+                <br>
             </div>
             <div class="col-md-4 col-md-offset-1 workImage"><img src="img/tech4u.png" alt="" width="300px"></div>
             <div class="col-md-4 col-md-offset-2 workImage"><img src="img/8.jpg" alt="" width="300px"></div>
-             <div class="col-md-4 col-md-offset-1"><p>Technoloy4u</p></div>
+            <div class="col-md-4 col-md-offset-1"><p>Technoloy4u</p></div>
             <div class="col-md-4 col-md-offset-2"><p>sito</p></div>
         </div>
     </div>
@@ -102,9 +117,17 @@
         <div class="col-md-12 imageThumbnail">
             <?php
             $image = new Flickr();
-            $image->getImage();
             ?>
+
+        <section class="main">
+            <div id="ri-grid" class="ri-grid ri-grid-size-2 ri-shadow">
+                <ul>
+                  <?php  $image->getImage(); ?>
+                </ul>
+            </div>
+        </section>
         </div>
+
     </div>
     <span id="index_flickr"></span>
 
@@ -150,5 +173,29 @@
 </div>
 
 <script src="include/scripts/scripts.js"></script>
+<script type="text/javascript" src="include/gridImagesJs/jquery.gridrotator.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#ri-grid').gridrotator({
+            rows:2,
+            columns:4,
+            animSpeed: 500,
+            animType: 'rotateBottom',
+//            w320: {
+//                rows: 4,
+//                columns: 4
+//            },
+//            w240: {
+//                rows: 4,
+//                columns: 4
+//            },
+            preventClick	: true,
+
+            slideshow: false,
+            onhover: true
+        });
+
+    });
+</script>
 </body>
 </html>
