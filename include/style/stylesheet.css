@@ -58,6 +58,10 @@ p {
 
 }
 
+.workImage{
+    border: 1px #8699a4 solid;
+}
+
 #content_frameworks {
     height: 100vh;
 }
@@ -76,6 +80,10 @@ p {
 #content_web {
     height: 100vh;
     font-size: 24px;
+}
+
+#content_works{
+    height:100vh;
 }
 
 #content_flickr {
@@ -150,6 +158,15 @@ p {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
+
+#wall_works{
+    background:url('../../img/8.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
 
 #wall_flickr {
     background: url('../../img/14.jpg');
