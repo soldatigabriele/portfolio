@@ -30,6 +30,7 @@
         <a id="about" href="#">About Me</a> |
         <a id="web" href="#">Skills</a> |
         <a id="frameworks" href="#">Frameworks</a> |
+        <a id="works" href="#">Works</a> |
         <a id="flickr" href="#">Flickr</a> |
         <a id="contacts" href="#">Contacts</a>
     </nav>
@@ -74,6 +75,26 @@
     </div>
     <span id="index_frameworks"></span>
 
+    <div class="image" id="wall_works" data-stellar-background-ratio="0.2"></div>
+    <div class="content" id="content_works">
+        <div class="title">Previous Works</div>
+        <br><br>
+        <div class="col-md-12" >
+            <div class="col-md-4 col-md-offset-1 workImage"><img src="img/vault.jpg" alt="" height="" width="300px"></div>
+            <div class="col-md-4 col-md-offset-2 workImage"><img src="img/laboa.png" alt="" width="300px"></div>
+            <div class="col-md-4 col-md-offset-1"><p>ImageVault</p></div>
+            <div class="col-md-4 col-md-offset-2"><p>Laboa.org</p></div>
+            <div class="col-md-12" style="">
+            <br>
+            </div>
+            <div class="col-md-4 col-md-offset-1 workImage"><img src="img/tech4u.png" alt="" width="300px"></div>
+            <div class="col-md-4 col-md-offset-2 workImage"><img src="img/8.jpg" alt="" width="300px"></div>
+             <div class="col-md-4 col-md-offset-1"><p>Technoloy4u</p></div>
+            <div class="col-md-4 col-md-offset-2"><p>sito</p></div>
+        </div>
+    </div>
+    <span id="index_works"></span>
+
     <div class="image" id="wall_flickr" data-stellar-background-ratio="0.2"></div>
     <div class="content" id="content_flickr">
         <div class="title">Flickr</div>
@@ -85,7 +106,7 @@
             ?>
         </div>
     </div>
-        <span id="index_flickr"></span>
+    <span id="index_flickr"></span>
 
     <span id="index_contacts"></span>
 
