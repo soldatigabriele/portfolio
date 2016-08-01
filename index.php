@@ -45,12 +45,14 @@
 </div>
 
 
-<div class="page">
+<div class="page" style="background: ">
     <div class="firstImage" id="wall_about" data-stellar-background-ratio="0.5"></div>
     <div class="content" id="content_about">
-        <div class="title">Who am I</div>
-        <p>I am a back-end developer graduate of Internet Technology</p>
-        <p>I like to challenge myself and I love to learn!</p>
+        <div class="title">WHO AM I</div>
+        <div class="description">
+            <p>I am a back-end developer graduate of Internet Technology</p>
+            <p>I like to challenge myself and I love to learn!</p>
+        </div>
     </div>
     <span id="index_about"></span>
 
@@ -63,14 +65,14 @@
             <p>I love GITHUB and VIM too!</p>
         </div>
         <div class="images">
-            <div class="col-md-10 col-md-offset-1" style="padding-bottom:30px;bottom:0px;position:absolute;">
+            <div class="col-md-10 col-md-offset-1 logos">
                 <div class="col-md-2 transparent" id="slide1"><img class="img-circle" id="img1" src="img/php.png"
                                                                    alt="Circle image"></div>
                 <div class="col-md-2 transparent" id="slide2"><img class="img" id="img2" src="img/mysql.png"
                                                                    alt="Circle image"></div>
                 <div class="col-md-2 transparent" id="slide3"><img class="img" id="img3" src="img/githubB.png"
                                                                    alt="Circle image"></div>
-                <div class="col-md-2 transparent" id="slide4"><img class="img" id="img5" src="img/js.jpg"
+                <div class="col-md-2 transparent" id="slide4"><img class="img" id="img5" src="img/js.png"
                                                                    alt="Circle image"></div>
                 <div class="col-md-2 transparent" id="slide5"><img class="img" id="img4" src="img/nodejs.png"
                                                                    alt="Circle image"></div>
@@ -202,8 +204,8 @@
                 columns: 3
             },
             preventClick: true,
-            animEasingOut	: 'linear',
-            animEasingIn	: 'linear',
+            animEasingOut: 'linear',
+            animEasingIn: 'linear',
 
             slideshow: false,
             onhover: true
