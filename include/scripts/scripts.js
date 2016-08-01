@@ -34,17 +34,19 @@ function setBindings() {
     //jQuery images
     $(document).ready(function () {
         var n = 1;
-        $('#slide' + n).appear();
-        $('#slide' + n).on('appear', function () {
+        $('#slide1').appear();
+        $('#slide1').on('appear', function () {
             function removeClass() {
                 if ($('#slide' + n).hasClass('transparent')) {
-                    $("#slide" + n).mouseover(function(){$(this).fadeTo(300,0.9);});
-                    $("#slide" + n).mouseout(function(){$(this).fadeTo(300,1);});
-                    $("#slide" + n).delay(n + 0).fadeTo(20, 1);
-                    n = n + 1;
+                    $("#slide" + n).mouseover(function(){$(this).fadeTo(200,0.3);});
+                    $("#slide" + n).mouseout(function(){$(this).fadeTo(200,1);});
+                    $("#slide" + n).fadeTo("slow", 1, function(){
+                        n = n + 1;
+                        removeClass();
+                    });
                 }
             }
-            removeClass(n);
+            removeClass();
         });
         function resize(id) {
             var factor = 2;
