@@ -119,13 +119,13 @@
             $image = new Flickr();
             ?>
 
-        <section class="main">
-            <div id="ri-grid" class="ri-grid ri-grid-size-2 ri-shadow">
-                <ul>
-                  <?php  $image->getImage(); ?>
-                </ul>
-            </div>
-        </section>
+            <section class="main">
+                <div id="ri-grid" class="ri-grid ri-grid-size-2 ri-shadow">
+                    <ul>
+                        <?php $image->getImage(); ?>
+                    </ul>
+                </div>
+            </section>
         </div>
 
     </div>
@@ -177,19 +177,31 @@
 <script type="text/javascript">
     $(function () {
         $('#ri-grid').gridrotator({
-            rows:2,
-            columns:4,
+            rows: 3,
+            columns: 6,
             animSpeed: 500,
             animType: 'rotateBottom',
-//            w320: {
-//                rows: 4,
-//                columns: 4
-//            },
-//            w240: {
-//                rows: 4,
-//                columns: 4
-//            },
-            preventClick	: true,
+            w1024: {
+                rows: 3,
+                columns: 6
+            },
+            w768: {
+                rows: 3,
+                columns: 6
+            },
+            w480: {
+                rows: 3,
+                columns: 5
+            },
+            w320: {
+                rows: 2,
+                columns: 4
+            },
+            w240: {
+                rows: 2,
+                columns: 3
+            },
+            preventClick: true,
 
             slideshow: false,
             onhover: true

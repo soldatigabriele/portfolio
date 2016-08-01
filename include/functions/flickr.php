@@ -30,7 +30,7 @@ class Flickr{
             $imgArray[] = $img;
         }
 //        print the images
-        for($i=1;$i<=16;$i++) {
+        for($i=1;$i<=18;$i++) {
             echo '<li><a href="#"><img src="'.$imgArray[$i].'"/></a></li>';
         }
 
