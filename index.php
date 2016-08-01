@@ -86,8 +86,10 @@
     <div class="image" id="wall_frameworks" data-stellar-background-ratio="0.2"></div>
     <div class="content" id="content_frameworks">
         <div class="title">Laravel 5</div>
-        <p>Laravel is my favourite PHP Framework!</p>
-        <p>It makes everything easier and faster!</p>
+        <div class="description">
+            <p>Laravel is my favourite PHP Framework!</p>
+            <p>It makes everything easier and faster!</p>
+        </div>
     </div>
     <span id="index_frameworks"></span>
 
@@ -176,42 +178,7 @@
 
 <script src="include/scripts/scripts.js"></script>
 <script type="text/javascript" src="include/gridImagesJs/jquery.gridrotator.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $('#ri-grid').gridrotator({
-            rows: 3,
-            columns: 6,
-            animSpeed: 500,
-            animType: 'rotateBottom',
-            w1024: {
-                rows: 3,
-                columns: 6
-            },
-            w768: {
-                rows: 3,
-                columns: 6
-            },
-            w480: {
-                rows: 3,
-                columns: 5
-            },
-            w320: {
-                rows: 2,
-                columns: 4
-            },
-            w240: {
-                rows: 2,
-                columns: 3
-            },
-            preventClick: true,
-            animEasingOut: 'linear',
-            animEasingIn: 'linear',
+<script src="include/scripts/grid.js"></script>
 
-            slideshow: false,
-            onhover: true
-        });
-
-    });
-</script>
 </body>
 </html>

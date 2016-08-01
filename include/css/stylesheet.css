@@ -68,15 +68,17 @@ a:active{color:lightslategray;text-decoration:none;}
 }
 
 #content_frameworks {
-    height: 100vh;
+    margin-top: 5%;
+    height: 95vh;
+    width:100%
 }
 
 #content_about {
-    height: 90vh;
+    height: 95vh;
     width: 100%;
     /*display: table-cell;*/
     /*vertical-align: middle;*/
-    margin-top: 10%;
+    margin-top: 5%;
 }
 #content_web {
     height: 100vh;
@@ -86,10 +88,14 @@ a:active{color:lightslategray;text-decoration:none;}
 }
 
 #content_works{
-    height:100vh;
+    height:95vh;
+    margin-top: 3%;
+    width:100%
 }
 
 #content_flickr {
+    margin-top:3%;
+    width:100%
     /*min-height: 400px;*/
 }
 
@@ -100,6 +106,8 @@ a:active{color:lightslategray;text-decoration:none;}
     min-height: 100px;
     max-height:10hv;
     margin-top: 50px;
+    padding-top: 15px;
+    width:100%;
     /*position: inherit;*/
     /*padding-top:30px;*/
     /*bottom: 0px;*/
@@ -138,7 +146,9 @@ a:active{color:lightslategray;text-decoration:none;}
 
 /*Flickr images*/
 .imageThumbnail {
-    /*margin-top: 20px;*/
+    width:70%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .transparent {
