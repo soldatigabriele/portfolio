@@ -202,6 +202,8 @@
                 columns: 3
             },
             preventClick: true,
+            animEasingOut	: 'linear',
+            animEasingIn	: 'linear',
 
             slideshow: false,
             onhover: true
