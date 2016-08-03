@@ -18,19 +18,18 @@ if ($user->isLoggedIn()) {
         $filename = $upload->nomeFile();
 //nome del file criptato
 //        $fileCriptato = UPLOADDIR.'fileCriptato';
-        if ($_POST["titolo"] == 'CIf') {
-            $fileCriptato = UPLOADDIR . hash('md5', 'CIf' . $user->data()->idUtente);
-        } elseif ($_POST["titolo"] == 'CIr') {
-            $fileCriptato = UPLOADDIR . hash('md5', 'CIr' . $user->data()->idUtente);
-        } elseif ($_POST["titolo"] == 'CF') {
-            $fileCriptato = UPLOADDIR . hash('md5', 'CF' . $user->data()->idUtente);
-        }
+            $fileCriptato = UPLOADDIR . hash('md5', $idImage . $user->data()->idUtente);
 
         $encrypted_string = $crypt->encrypt(base64_encode(file_get_contents($filename)));
 //salva il file codificato
         file_put_contents($fileCriptato, $encrypted_string);
 // elimino le immagini originali
+
         UploadFile::eliminaImmagine($filename);
+
+//        record the upload in the database
+        $db = DB::getInstance();
+        $db->insert('images',['name'=>$filename,'fkUser'=>$user->data()->idUtente]);
 
     }
 
