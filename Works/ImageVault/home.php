@@ -10,14 +10,14 @@
 
                 <!-- il nome dell'utente viene ritornato tramite la funzione escape, per prevenire attachi di tipo cross site scripting  -->
                 <div class="col-md-12 spacing">
-                    <h3>Benvenuto, <a href="profile.php?username=<?php echo escape($user->data()->username);?>"><?php echo escape($user->data()->username); ?></a>! </h3>
+                    <h3>Welcome, <a href="profile.php?username=<?php echo escape($user->data()->username);?>"><?php echo escape($user->data()->username); ?></a>! </h3>
                 </div>
                     <div class="clearfix"></div><br>
                 <?php
                 if(!$user->activated()){
                     echo '
                     <div class="col-md-12 controlPanel inactive">
-                        Attiva il tuo account
+                        Activate your account
                         <div class="col-md-12 controlPanel">
                             <div class="col-md-2 panelImages"><a href="logout.php"><img src="img/logout.png" height="18px" ></div>
                             <div class="col-md-10 listSpacing">Log out</a></div>
@@ -28,19 +28,15 @@
                 ?>
                 <div class="col-md-12 controlPanel">
                     <div class="col-md-2 panelImages" ><a href="update.php"><img src="img/update.png" height="20px" ></div>
-                    <div class="col-md-10 listSpacing" >Aggiorna il profilo</a></div>
+                    <div class="col-md-10 listSpacing">Update Profile</a></div>
                 </div>
                 <div class="col-md-12 controlPanel" >
                     <div class="col-md-2 panelImages" ><a href="changepassword.php"><img src="img/password.png" height="20px" ></div>
-                    <div class="col-md-10 listSpacing">Cambia Password</a></div>
+                    <div class="col-md-10 listSpacing">Change Password</a></div>
                 </div>
                 <div class="col-md-12 controlPanel">
                     <div class="col-md-2 panelImages" ><a href="upload.php"><img src="img/upload.png" height="19px" ></div>
-                    <div class="col-md-10 listSpacing">Upload CI e CF</a></div>
-                </div>
-                <div class="col-md-12 controlPanel">
-                    <div class="col-md-2 panelImages"><a href="cartacredito.php"><img src="img/carta.png" height="18px" ></div>
-                    <div class="col-md-10 listSpacing">Carta di credito</a></div>
+                    <div class="col-md-10 listSpacing">Upload images</a></div>
                 </div>
                 <div class="col-md-12 controlPanel">
                     <div class="col-md-2 panelImages"><a href="logout.php"><img src="img/logout.png" height="18px" ></div>
