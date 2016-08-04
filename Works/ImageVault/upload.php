@@ -3,6 +3,8 @@
 require_once 'navigation.php';
 
 $user = new User();
+$db = DB::getInstance();
+
 if ($user->isLoggedIn()) {
 
     if (isset($_POST['submit'])) {
@@ -18,7 +20,7 @@ if ($user->isLoggedIn()) {
         $filename = $upload->nomeFile();
 //nome del file criptato
 //        $fileCriptato = UPLOADDIR.'fileCriptato';
-            $fileCriptato = UPLOADDIR . hash('md5', $idImage . $user->data()->idUtente);
+        $fileCriptato = UPLOADDIR . hash('md5', $idImage . $user->data()->idUtente);
 
         $encrypted_string = $crypt->encrypt(base64_encode(file_get_contents($filename)));
 //salva il file codificato
@@ -28,16 +30,30 @@ if ($user->isLoggedIn()) {
         UploadFile::eliminaImmagine($filename);
 
 //        record the upload in the database
-        $db = DB::getInstance();
-        $db->insert('images',['name'=>$filename,'fkUser'=>$user->data()->idUtente]);
+        $db->insert('images', ['name' => $fileCriptato, 'fkUser' => $user->data()->idUtente]);
 
     }
-
+    $images = $db->get('Images', ['fkUser', '=', $user->data()->idUtente]);
+    if ($db->count()) {
+        echo 'ciao';
+        $count = true;
+    } else {
+        echo 'niente';
+    }
 // verifico che se esistono delle immagini già caricate dall'utente
-    $CIf = file_exists(UPLOADDIR . hash('md5', 'CIf' . $user->data()->idUtente));
+    print_r($images->first()->name);
+    foreach ($images as $image) {
+echo $image->data()->name;
+//        if (!file_exists(
+//
+//            UPLOADDIR . hash('', 'CIf' . $user->data()->idUtente))
+//        ) {
+//        elimina
+//        }
+    }
 
-    if(isset($_POST['mostra'])) {
-        
+    if (isset($_POST['mostra'])) {
+
         echo '<div class="homeContainer" style="background: ">
                 <div class="col-md-8">
                     <form action="upload.php" method="POST">                
@@ -46,22 +62,22 @@ if ($user->isLoggedIn()) {
                      <div class="clearfix"></div><br>
                ';
 
-                // genero una chiave per criptare e decriptare le immagini partendo dalla password dell'utente
-                $key = hash('md5', $user->data()->password);
-                $crypt = new Encryption($key);
+        // genero una chiave per criptare e decriptare le immagini partendo dalla password dell'utente
+        $key = hash('md5', $user->data()->password);
+        $crypt = new Encryption($key);
 
-                // per ogni file verifico se esiste e in tal caso lo decodifico. una volta mostrata l'immagine la elimino
-                if ($CIf) {
-                    $fileCriptato = UPLOADDIR . hash('md5', 'CIf' . $user->data()->idUtente);
-                    $fileDecriptato = UPLOADDIR . $user->data()->idUtente . 'CIf.jpg';
-                    //decodifica del file
-                    $decrypted_string = base64_decode($crypt->decrypt(file_get_contents($fileCriptato)));
-                    //salvataggio del file decodificato
-                    file_put_contents($fileDecriptato, $decrypted_string);
-                    echo '<div class="col-md-8">Carta Identità fronte:<br> <img src="' . $fileDecriptato . '" height="300px"></div>';
-                }
+        // per ogni file verifico se esiste e in tal caso lo decodifico. una volta mostrata l'immagine la elimino
+        if ($CIf) {
+            $fileCriptato = UPLOADDIR . hash('md5', 'CIf' . $user->data()->idUtente);
+            $fileDecriptato = UPLOADDIR . $user->data()->idUtente . 'CIf.jpg';
+            //decodifica del file
+            $decrypted_string = base64_decode($crypt->decrypt(file_get_contents($fileCriptato)));
+            //salvataggio del file decodificato
+            file_put_contents($fileDecriptato, $decrypted_string);
+            echo '<div class="col-md-8">Carta Identità fronte:<br> <img src="' . $fileDecriptato . '" height="300px"></div>';
+        }
 
-                echo '
+        echo '
                     <div class="clearfix"></div><br>
                         <div class="col-md-12">
                                 per uscire in modo sicuro <a href="upload.php">clicca qui</a> 
@@ -72,14 +88,14 @@ if ($user->isLoggedIn()) {
             ';
 
 
-
-    }else {
+    } else {
 
         ?>
 
-        <div class="homeContainer" >
+        <div class="homeContainer">
             <div class="group col-md-7">
-                <div class="clearfix"></div><br>
+                <div class="clearfix"></div>
+                <br>
                 <div class="col-md-12" style="padding: 20px 0px 20px 0px;">
                     <div class="col-md-12" style="padding-top:10px;">
                         <p>È possibile caricare solo file jpg non superiori a 5MB.</p><br>
@@ -93,20 +109,24 @@ if ($user->isLoggedIn()) {
                                 <input type="file" name="fileToUpload" id="fileToUpload">
                             </div>
                             <div class="col-md-4">
-                                <input type="submit" class="form-control btn btn-success" value="<?php if ($CIr) {echo 'Aggiorna Documento';}else{echo 'Carica Documento';} ?>" name="submit">
+                                <input type="submit" class="form-control btn btn-success" value="<?php if ($CIr) {
+                                    echo 'Aggiorna Documento';
+                                } else {
+                                    echo 'Carica Documento';
+                                } ?>" name="submit">
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="col-md-12"><br></div>
                 <?php
-                if($CF||$CIf||$CIr){
+                if ($count) {
                     ?>
                     <div class="col-md-4"
                          style="padding: 20px 0px 20px 0px;">
                         <div class="col-md-12">
                             <form action="" method="POST">
-                                <input type="submit" class="btn btn-primary" name="mostra" value="Mostra Documenti">
+                                <input type="submit" class="btn btn-primary" name="mostra" value="Show Images">
                             </form>
                         </div>
                     </div>
@@ -115,7 +135,8 @@ if ($user->isLoggedIn()) {
                 ?>
 
             </div>
-            <div class="clearfix"></div><br>
+            <div class="clearfix"></div>
+            <br>
         </div>
 
         <?php
