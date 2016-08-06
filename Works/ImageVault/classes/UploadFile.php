@@ -5,21 +5,23 @@
 class UploadFile
 {
     private $_directory = "uploads/",
-            $_file,
-            $_image,
-            $_estensione,
-            $_check,
-            $_nomeFile,
-            $_uploadOk = 1;
+        $_file,
+        $_image,
+        $_estensione,
+        $_check,
+        $_nomeFile,
+        $_uploadOk = 1;
 
 /// setto le variabili file e estensione partendo dall'immagine caricata dall'utente
-    public function __construct($image = null,$nome){
+    public function __construct($image = null, $nome)
+    {
         $this->_image = $image;
-        $this->_file = $this->_directory.$nome;
-        $this->_estensione = pathinfo($this->_directory.basename($image["name"]), PATHINFO_EXTENSION);
+        $this->_file = $this->_directory . $nome;
+        $this->_estensione = pathinfo($this->_directory . basename($image["name"]), PATHINFO_EXTENSION);
     }
 
-    public function validate(){
+    public function validate()
+    {
         // controllo se è un'immagine
         $this->_check = getimagesize($this->_image["tmp_name"]);
         if ($this->_check !== false) {
@@ -51,9 +53,8 @@ class UploadFile
         //se ci sono errori
         if ($this->_uploadOk == 0) {
             echo " errore nel caricamento del file.<br>";
-            //altrimenti
         } else {
-            $this->_nomeFile = $this->_file.'.'.$this->_estensione;
+            $this->_nomeFile = $this->_file . '.' . $this->_estensione;
             if (move_uploaded_file($this->_image["tmp_name"], ($this->_nomeFile))) {
                 echo "Il file " . basename($this->_image["name"]) . " è stato caricato e cifrato correttamente.<br>";
             } else {
@@ -62,14 +63,24 @@ class UploadFile
         }
     }
 
-    public function nomeFile(){
+    public function nomeFile()
+    {
         return $this->_nomeFile;
     }
 
-    public static function eliminaImmagine($file){
+    public static function eliminaImmagine($file)
+    {
         unlink($file);
     }
 
+    public function hasErrors()
+    {
+        if ($this->_uploadOk) {
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
 
 
