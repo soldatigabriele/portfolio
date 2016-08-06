@@ -7,8 +7,24 @@ $db = DB::getInstance();
 
 if ($user->isLoggedIn()) {
 
+// delete decrypted images
+    $images = $db->get('Images', ['fkUser', '=', $user->data()->idUtente]);
+//    if user has uploaded images, show button
+    if ($images->count()) {
+        $count = true;
+    }
+    foreach ($images->results() as $image) {
+        $pic = $user->data()->idUtente . $image->id . '.jpg';
+        $imageName = 'uploads/' . $pic;
+        if (file_exists($imageName)) {
+            UploadFile::eliminaImmagine($imageName);
+        }
+    }
+//  check if crypted images are saved on the db
+
+
     if (isset($_POST['submit'])) {
-        $upload = new UploadFile($_FILES["fileToUpload"], $user->data()->username . '_' . $_POST[titolo]);
+        $upload = new UploadFile($_FILES["fileToUpload"], $_FILES["fileToUpload"]["name"]);
         $upload->validate();
         $upload->upload();
 
@@ -18,39 +34,29 @@ if ($user->isLoggedIn()) {
 
 // nome del file da criptare
         $filename = $upload->nomeFile();
-//nome del file criptato
+//delete the uploaded decrypted image
+        UploadFile::eliminaImmagine($filename);
 //        $fileCriptato = UPLOADDIR.'fileCriptato';
-        $fileCriptato = UPLOADDIR . hash('md5', $idImage . $user->data()->idUtente);
+        // new file name
+        $file = hash('md5', $filename . $user->data()->idUtente);
+        $fileCriptato = UPLOADDIR . $file;
 
         $encrypted_string = $crypt->encrypt(base64_encode(file_get_contents($filename)));
 //salva il file codificato
         file_put_contents($fileCriptato, $encrypted_string);
-// elimino le immagini originali
-
-        UploadFile::eliminaImmagine($filename);
-
 //        record the upload in the database
-        $db->insert('images', ['name' => $fileCriptato, 'fkUser' => $user->data()->idUtente]);
+        $db->insert('images', ['name' => $file, 'fkUser' => $user->data()->idUtente]);
+    }
 
-    }
-    $images = $db->get('Images', ['fkUser', '=', $user->data()->idUtente]);
-    if ($db->count()) {
-        echo 'ciao';
-        $count = true;
-    } else {
-        echo 'niente';
-    }
 // verifico che se esistono delle immagini già caricate dall'utente
-    print_r($images->first()->name);
-    foreach ($images as $image) {
-echo $image->data()->name;
+//    print_r($images);
 //        if (!file_exists(
 //
 //            UPLOADDIR . hash('', 'CIf' . $user->data()->idUtente))
 //        ) {
 //        elimina
 //        }
-    }
+//    }
 
     if (isset($_POST['mostra'])) {
 
@@ -66,16 +72,21 @@ echo $image->data()->name;
         $key = hash('md5', $user->data()->password);
         $crypt = new Encryption($key);
 
-        // per ogni file verifico se esiste e in tal caso lo decodifico. una volta mostrata l'immagine la elimino
-        if ($CIf) {
-            $fileCriptato = UPLOADDIR . hash('md5', 'CIf' . $user->data()->idUtente);
-            $fileDecriptato = UPLOADDIR . $user->data()->idUtente . 'CIf.jpg';
-            //decodifica del file
-            $decrypted_string = base64_decode($crypt->decrypt(file_get_contents($fileCriptato)));
-            //salvataggio del file decodificato
-            file_put_contents($fileDecriptato, $decrypted_string);
-            echo '<div class="col-md-8">Carta Identità fronte:<br> <img src="' . $fileDecriptato . '" height="300px"></div>';
+        $images = $db->get('Images', ['fkUser', '=', $user->data()->idUtente]);
+        foreach ($images->results() as $image) {
+            if (file_exists('uploads/' . $image->name)) {
+                $fileCriptato = UPLOADDIR . $image->name;
+                $fileDecriptato = UPLOADDIR . $user->data()->idUtente . $image->id . '.jpg';
+                $decrypted_string = base64_decode($crypt->decrypt(file_get_contents($fileCriptato)));
+                file_put_contents($fileDecriptato, $decrypted_string);
+                echo '<div class="col-md-8"><img src="' . $fileDecriptato . '" height="300px"></div><br>';
+            } else {
+                echo 'file NON trovato ' . $image->id . '.jpg<br>';
+            }
         }
+
+        // per ogni file verifico se esiste e in tal caso lo decodifico. una volta mostrata l'immagine la elimino
+//        $user->data()->idUtente;
 
         echo '
                     <div class="clearfix"></div><br>
@@ -109,11 +120,8 @@ echo $image->data()->name;
                                 <input type="file" name="fileToUpload" id="fileToUpload">
                             </div>
                             <div class="col-md-4">
-                                <input type="submit" class="form-control btn btn-success" value="<?php if ($CIr) {
-                                    echo 'Aggiorna Documento';
-                                } else {
-                                    echo 'Carica Documento';
-                                } ?>" name="submit">
+                                <input type="submit" class="form-control btn btn-success" value="Carica Documento"
+                                       name="submit">
                             </div>
                         </form>
                     </div>

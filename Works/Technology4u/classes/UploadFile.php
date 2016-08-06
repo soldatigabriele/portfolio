@@ -13,9 +13,9 @@ class UploadFile
             $_uploadOk = 1;
 
 /// setto le variabili file e estensione partendo dall'immagine caricata dall'utente
-    public function __construct($image = null,$nome){
+    public function __construct($image = null,$name){
         $this->_image = $image;
-        $this->_file = $this->_directory.$nome;
+        $this->_file = $this->_directory.$name;
         $this->_estensione = pathinfo($this->_directory.basename($image["name"]), PATHINFO_EXTENSION);
     }
 
