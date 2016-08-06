@@ -32,7 +32,7 @@ if ($user->isLoggedIn()) {
             // genero una chiave per criptare e decriptare le immagini partendo dalla password dell'utente
             $key = hash('md5', $user->data()->password);
             $crypt = new Encryption($key);
-
+            $extension = $upload->fileExtension();
 // name and extension
             $filename = $upload->nomeFile();
             // new file name
