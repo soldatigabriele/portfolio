@@ -54,7 +54,7 @@ if ($user->isLoggedIn()) {
         echo '<div class="homeContainer" style="background: ">
                 <div class="col-md-8">
                     <form action="upload.php" method="POST">                
-                        <input type="submit" class="btn btn-primary" name="indietro" value="Indietro">
+                        <input type="submit" class="btn btn-outline-primary" name="indietro" value="Indietro">
                     </form>
                      <div class="clearfix"></div><br>
                ';
@@ -93,9 +93,9 @@ if ($user->isLoggedIn()) {
 
         echo '
                     <div class="clearfix"></div><br>
-                        <div class="col-md-12">
-                                per uscire in modo sicuro <a href="upload.php">clicca qui</a> 
-                        </div>
+                        <form action="upload.php" method="POST">                
+                            <input type="submit" class="btn btn-outline-primary" name="indietro" value="Indietro">
+                        </form>     
                     </div>
                     <div class="clearfix"></div><br>
                 </div> <!-- chiusura homeContainer-->
@@ -107,18 +107,30 @@ if ($user->isLoggedIn()) {
         ?>
 
         <div class="homeContainer">
+
             <div class="group col-md-4">
+                <div class="col-md-12">
+                    <form action="index.php" method="POST">
+                        <input type="submit" class="btn btn-outline-primary" name="home" value="Homepage">
+                    </form>
+                </div>
                 <div class="clearfix"></div>
                 <br>
                 <div class="col-md-12" style="padding: 20px 0px 20px 0px;">
-                    <form action="upload.php" method="post" enctype="multipart/form-data">
-                        <div class="col-md-12">
-                            <input type="file" name="fileToUpload" id="fileToUpload">
+                    <form action="upload.php" enctype="multipart/form-data" method="post" enctype="multipart/form-data">
+                        <div class="col-md-8">
+                            <label class="control-label">Select File</label>
+                            <input id="input-4" name="input4[]" type="file" multiple class="file-loading">
+                            
+                            <label class="custom-file">
+                                <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload">
+                                <span class="custom-file-control"></span>
+                            </label>
                         </div>
                         <div class="clearfix"></div>
                         <br>
                         <div class="col-md-12">
-                            <input type="submit" class="btn btn-primary" value="Upload Image"
+                            <input type="submit" class="btn btn-outline-primary" value="Upload Image"
                                    name="submit">
                         </div>
                     </form>
@@ -131,7 +143,7 @@ if ($user->isLoggedIn()) {
                          style="padding: 20px 0px 20px 0px;">
                         <div class="col-md-12">
                             <form action="" method="POST">
-                                <input type="submit" class="btn btn-primary" name="mostra" value="Show Images">
+                                <input type="submit" class="btn btn-outline-primary" name="mostra" value="Show Images">
                             </form>
                         </div>
                     </div>

@@ -23,7 +23,10 @@ require_once 'inc/init.php';
 
     <!-- Custom CSS -->
     <link href="css/technology4u-homepage.css" rel="stylesheet">
-
+    <script src="js/bootstrap.js"></script>
+    <!-- fileinput plugin-->
+    <link href="inc/bootstrap-fileinput/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="inc/bootstrap-fileinput/js/fileinput.js" type="text/javascript"></script>
 </head>
 <body>
 
