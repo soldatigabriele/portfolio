@@ -16,27 +16,26 @@ if ($user->isLoggedIn()) {
 
 //    delete decrypted images
     foreach ($images->results() as $image) {
-        $pic = $user->data()->idUtente . $image->id . '.jpg';
+        $pic = $user->data()->idUtente . $image->id . '.'.$image->ext;
         $imageName = 'uploads/' . $pic;
         if (file_exists($imageName)) {
             UploadFile::eliminaImmagine($imageName);
         }
     }
-//  check if crypted images are saved on the db
-
 
     if (isset($_POST['submit'])) {
         $upload = new UploadFile($_FILES["fileToUpload"], $_FILES["fileToUpload"]["name"]);
         $upload->validate();
         $upload->upload();
 //        if there is no error encrypt the image
-        if ($upload->hasErrors()) {
+        if (!$upload->hasErrors()) {
             // genero una chiave per criptare e decriptare le immagini partendo dalla password dell'utente
             $key = hash('md5', $user->data()->password);
             $crypt = new Encryption($key);
 
-// nome del file da criptare
+// name and extension
             $filename = $upload->nomeFile();
+            echo 'ESTENSIONE: '.$extension = $upload->fileExtension();
 //        $fileCriptato = UPLOADDIR.'fileCriptato';
             // new file name
             $file = hash('md5', $_FILES["fileToUpload"]["tmp_name"] . $user->data()->idUtente);
@@ -46,21 +45,11 @@ if ($user->isLoggedIn()) {
 //salva il file codificato
             file_put_contents($fileCriptato, $encrypted_string);
 //        record the upload in the database
-            $db->insert('images', ['name' => $file, 'fkUser' => $user->data()->idUtente]);
+            $db->insert('images', ['name' => $file, 'fkUser' => $user->data()->idUtente, 'ext' => $extension]);
 //delete the uploaded decrypted image
             UploadFile::eliminaImmagine($filename);
         }
     }
-
-// verifico che se esistono delle immagini già caricate dall'utente
-//    print_r($images);
-//        if (!file_exists(
-//
-//            UPLOADDIR . hash('', 'CIf' . $user->data()->idUtente))
-//        ) {
-//        elimina
-//        }
-//    }
 
     if (isset($_POST['mostra'])) {
 
@@ -83,22 +72,19 @@ if ($user->isLoggedIn()) {
         foreach ($images->results() as $image) {
             if (file_exists($directory . $image->name)) {
                 $fileCriptato = UPLOADDIR . $image->name;
-                $fileDecriptato = UPLOADDIR . $user->data()->idUtente . $image->id . '.jpg';
+                $fileDecriptato = UPLOADDIR . $user->data()->idUtente . $image->id . '.' . $image->ext;
                 $decrypted_string = base64_decode($crypt->decrypt(file_get_contents($fileCriptato)));
                 file_put_contents($fileDecriptato, $decrypted_string);
                 echo '<div class="col-md-8"><img src="' . $fileDecriptato . '" height="300px"></div><br>';
             } else {
-                echo 'file NON trovato ' . $image->id . '.jpg<br>';
+                echo 'file NON trovato ' . $image->id . '.'.$image->ext.'<br>';
                 $db->delete('Images', ['id', '=', $image->id]);
             }
-            //    scan the directory looking for missing images
-            foreach ($files as $file) {
-                if ($file == $image->name) {
-                    echo 'trovato un file corrispondente';
-                } else {
-                    echo '<script>alert(' . $file . ');</script>';
-//                    $db->delete('Images',['name','=',$image->name]);
-                }
+        }
+        foreach($files as $file){
+            $images = $db->get('Images', ['name', '=', $file]);
+            if(!$images->count()){
+                UploadFile::eliminaImmagine('uploads/'.$file);
             }
         }
 

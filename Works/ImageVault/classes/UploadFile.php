@@ -41,14 +41,19 @@ class UploadFile
             $this->_uploadOk = 0;
         }
         // permette solo jpg
-        if ($this->_estensione != "jpg") {
-            echo "Sono permessi solo jpg.<br>";
+        if ($this->_estensione == "JPG" || $this->_estensione == "jpg") {
+            $this->_estensione = 'jpg';
+        } elseif ($this->_estensione == "PNG" || $this->_estensione == "png") {
+            $this->_estensione = 'png';
+        } else {
             $this->_uploadOk = 0;
+            echo "You can upload only PNG or JPG.<br>";
         }
     }
 
 //    eseguo l'upload
-    public function upload()
+    public
+    function upload()
     {
         //se ci sono errori
         if ($this->_uploadOk == 0) {
@@ -63,22 +68,30 @@ class UploadFile
         }
     }
 
-    public function nomeFile()
+    public
+    function nomeFile()
     {
         return $this->_nomeFile;
     }
 
-    public static function eliminaImmagine($file)
+    public function fileExtension()
+    {
+        return $this->_estensione;
+    }
+
+    public
+    static function eliminaImmagine($file)
     {
         unlink($file);
     }
 
-    public function hasErrors()
+    public
+    function hasErrors()
     {
         if ($this->_uploadOk) {
-            return true;
-        }else{
             return false;
+        } else {
+            return true;
         }
     }
 }
