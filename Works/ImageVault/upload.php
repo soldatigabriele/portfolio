@@ -116,25 +116,35 @@ if ($user->isLoggedIn()) {
                 </div>
                 <div class="clearfix"></div>
                 <br>
-                <div class="col-md-12" style="padding: 20px 0px 20px 0px;">
-                    <form action="upload.php" enctype="multipart/form-data" method="post" enctype="multipart/form-data">
-                        <div class="col-md-8">
-                            <label class="control-label">Select File</label>
-                            <input id="input-4" name="input4[]" type="file" multiple class="file-loading">
-                            
-                            <label class="custom-file">
-                                <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload">
-                                <span class="custom-file-control"></span>
-                            </label>
-                        </div>
-                        <div class="clearfix"></div>
+<!--                <div class="col-md-12" style="padding: 20px 0px 20px 0px;">-->
+<!--                    <form action="upload.php" method="post" enctype="multipart/form-data">-->
+<!--                        <div class="col-md-8">-->
+<!--                            <label class="control-label">Select File</label>-->
+<!--                            <input id="input-4" name="input4[]" type="file" multiple class="file-loading">-->
+<!---->
+<!--                            <label class="custom-file">-->
+<!--                                <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload">-->
+<!--                                <span class="custom-file-control"></span>-->
+<!--                            </label>-->
+<!--                        </div>-->
+<!--                        <div class="clearfix"></div>-->
+<!--                        <br>-->
+<!--                        <div class="col-md-12">-->
+<!--                            <input type="submit" class="btn btn-outline-primary" value="Upload Image"-->
+<!--                                   name="submit">-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
+                <!-- fileupload plugin -->
+                <div class="container kv-main">
+                    <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <input id="file-0a" class="file" type="file" name="fileToUpload" multiple data-min-file-count="1">
                         <br>
-                        <div class="col-md-12">
-                            <input type="submit" class="btn btn-outline-primary" value="Upload Image"
-                                   name="submit">
-                        </div>
+                        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+<!--                        <button type="reset" class="btn btn-default">Reset</button>-->
                     </form>
                 </div>
+
                 <div class="col-md-12"></div>
                 <?php
                 if ($count) {
@@ -156,6 +166,7 @@ if ($user->isLoggedIn()) {
         <div class="clearfix"></div>
         <br>
         </div>
+        <script src="inc/bootstrap-fileinput/js/script.js"></script>
 
         <?php
     }

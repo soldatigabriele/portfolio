@@ -25,8 +25,14 @@ require_once 'inc/init.php';
     <link href="css/technology4u-homepage.css" rel="stylesheet">
     <script src="js/bootstrap.js"></script>
     <!-- fileinput plugin-->
+<!--    <link src="css/bootstrap3.3.4.css" rel="stylesheet">-->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="path/to/themes/fa/theme.js"></script>
+
     <link href="inc/bootstrap-fileinput/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
     <script src="inc/bootstrap-fileinput/js/fileinput.js" type="text/javascript"></script>
+
 </head>
 <body>
 
