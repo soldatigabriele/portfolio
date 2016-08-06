@@ -34,8 +34,6 @@ if ($user->isLoggedIn()) {
 
 // nome del file da criptare
         $filename = $upload->nomeFile();
-//delete the uploaded decrypted image
-        UploadFile::eliminaImmagine($filename);
 //        $fileCriptato = UPLOADDIR.'fileCriptato';
         // new file name
         $file = hash('md5', $filename . $user->data()->idUtente);
@@ -46,6 +44,8 @@ if ($user->isLoggedIn()) {
         file_put_contents($fileCriptato, $encrypted_string);
 //        record the upload in the database
         $db->insert('images', ['name' => $file, 'fkUser' => $user->data()->idUtente]);
+//delete the uploaded decrypted image
+        UploadFile::eliminaImmagine($filename);
     }
 
 // verifico che se esistono delle immagini già caricate dall'utente
