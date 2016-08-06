@@ -10,7 +10,7 @@ class UploadFile
         $_estensione,
         $_check,
         $_nomeFile,
-        $_uploadOk = 1;
+        $_error = array();
 
 /// setto le variabili file e estensione partendo dall'immagine caricata dall'utente
     public function __construct($image = null, $nome)
@@ -24,21 +24,16 @@ class UploadFile
     {
         // controllo se è un'immagine
         $this->_check = getimagesize($this->_image["tmp_name"]);
-        if ($this->_check !== false) {
-            $this->_uploadOk = 1;
-        } else {
-            echo "Il file non è un immagine: ";
-            $this->_uploadOk = 0;
+        if ($this->_check == false) {
+            $this->_error[] = "The file is not valid! ";
         }
         // Controllo se il file esiste già
         if (file_exists($this->_file)) {
-            echo "File già presente nel server: ";
-            $this->_uploadOk = 0;
+            $this->_error[] = "File already exists";
         }
         //controllo la dimensione del file (max 5MB)
         if ($_FILES["fileToUpload"]["size"] > 5000000) {
-            echo "Il file è troppo grande";
-            $this->_uploadOk = 0;
+            $this->_error[] = "File is too big (max 5MB)";
         }
         // permette solo jpg
         if ($this->_estensione == "JPG" || $this->_estensione == "jpg") {
@@ -46,8 +41,7 @@ class UploadFile
         } elseif ($this->_estensione == "PNG" || $this->_estensione == "png") {
             $this->_estensione = 'png';
         } else {
-            $this->_uploadOk = 0;
-            echo "You can upload only PNG or JPG.<br>";
+            $this->_error[] = "You can upload only PNG or JPG.<br>";
         }
     }
 
@@ -56,14 +50,13 @@ class UploadFile
     function upload()
     {
         //se ci sono errori
-        if ($this->_uploadOk == 0) {
-            echo " errore nel caricamento del file.<br>";
+        $errors = $this->hasErrors();
+        if ($errors != 1) {
+            foreach($errors as $error){echo $error.'<br>';};
         } else {
             $this->_nomeFile = $this->_file . '.' . $this->_estensione;
             if (move_uploaded_file($this->_image["tmp_name"], ($this->_nomeFile))) {
                 echo "Il file " . basename($this->_image["name"]) . " è stato caricato e cifrato correttamente.<br>";
-            } else {
-                echo "C'è stato un errore nell'upload o nella cifratura del file.<br>";
             }
         }
     }
@@ -88,9 +81,9 @@ class UploadFile
     public
     function hasErrors()
     {
-        if ($this->_uploadOk) {
-            return false;
-        } else {
+        if(!empty($this->_error)){
+            return $this->_error;
+        }else{
             return true;
         }
     }

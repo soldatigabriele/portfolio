@@ -16,7 +16,7 @@ if ($user->isLoggedIn()) {
 
 //    delete decrypted images
     foreach ($images->results() as $image) {
-        $pic = $user->data()->idUtente . $image->id . '.'.$image->ext;
+        $pic = $user->data()->idUtente . $image->id . '.' . $image->ext;
         $imageName = 'uploads/' . $pic;
         if (file_exists($imageName)) {
             UploadFile::eliminaImmagine($imageName);
@@ -26,17 +26,15 @@ if ($user->isLoggedIn()) {
     if (isset($_POST['submit'])) {
         $upload = new UploadFile($_FILES["fileToUpload"], $_FILES["fileToUpload"]["name"]);
         $upload->validate();
-        $upload->upload();
 //        if there is no error encrypt the image
-        if (!$upload->hasErrors()) {
+        $upload->upload();
+        if ($upload->hasErrors() == 1) {
             // genero una chiave per criptare e decriptare le immagini partendo dalla password dell'utente
             $key = hash('md5', $user->data()->password);
             $crypt = new Encryption($key);
 
 // name and extension
             $filename = $upload->nomeFile();
-            echo 'ESTENSIONE: '.$extension = $upload->fileExtension();
-//        $fileCriptato = UPLOADDIR.'fileCriptato';
             // new file name
             $file = hash('md5', $_FILES["fileToUpload"]["tmp_name"] . $user->data()->idUtente);
             $fileCriptato = UPLOADDIR . $file;
@@ -77,14 +75,15 @@ if ($user->isLoggedIn()) {
                 file_put_contents($fileDecriptato, $decrypted_string);
                 echo '<div class="col-md-8"><img src="' . $fileDecriptato . '" height="300px"></div><br>';
             } else {
-                echo 'file NON trovato ' . $image->id . '.'.$image->ext.'<br>';
+                // delete from the DB the files that doesn't exist
                 $db->delete('Images', ['id', '=', $image->id]);
             }
         }
-        foreach($files as $file){
+//        if the files are not stored in the DB, delete it
+        foreach ($files as $file) {
             $images = $db->get('Images', ['name', '=', $file]);
-            if(!$images->count()){
-                UploadFile::eliminaImmagine('uploads/'.$file);
+            if (!$images->count()) {
+                UploadFile::eliminaImmagine('uploads/' . $file);
             }
         }
 
@@ -108,29 +107,23 @@ if ($user->isLoggedIn()) {
         ?>
 
         <div class="homeContainer">
-            <div class="group col-md-7">
+            <div class="group col-md-4">
                 <div class="clearfix"></div>
                 <br>
                 <div class="col-md-12" style="padding: 20px 0px 20px 0px;">
-                    <div class="col-md-12" style="padding-top:10px;">
-                        <p>È possibile caricare solo file jpg non superiori a 5MB.</p><br>
-                    </div>
-                    <div class="col-md-12">
-                        <form action="upload.php" method="post" enctype="multipart/form-data">
-                            <div class="col-md-4">
-                                <input type="hidden" name="titolo" value="CIr">
-                            </div>
-                            <div class="col-md-4">
-                                <input type="file" name="fileToUpload" id="fileToUpload">
-                            </div>
-                            <div class="col-md-4">
-                                <input type="submit" class="form-control btn btn-success" value="Carica Documento"
-                                       name="submit">
-                            </div>
-                        </form>
-                    </div>
+                    <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <div class="col-md-12">
+                            <input type="file" name="fileToUpload" id="fileToUpload">
+                        </div>
+                        <div class="clearfix"></div>
+                        <br>
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-primary" value="Upload Image"
+                                   name="submit">
+                        </div>
+                    </form>
                 </div>
-                <div class="col-md-12"><br></div>
+                <div class="col-md-12"></div>
                 <?php
                 if ($count) {
                     ?>
@@ -145,10 +138,11 @@ if ($user->isLoggedIn()) {
                     <?php
                 }
                 ?>
-
             </div>
-            <div class="clearfix"></div>
-            <br>
+
+        </div>
+        <div class="clearfix"></div>
+        <br>
         </div>
 
         <?php
