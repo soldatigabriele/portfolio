@@ -53,6 +53,7 @@
             <p>I am a back-end developer graduate of Internet Technology</p>
             <p>I like to challenge myself and I love to learn!</p>
         </div>
+
     </div>
     <span id="index_about"></span>
 
@@ -109,7 +110,10 @@
             <div class="col-md-4 col-md-offset-1 workImage"><img src="img/tech4u.png" alt="" width="300px"></div>
             <div class="col-md-4 col-md-offset-2 workImage"><img src="img/8.jpg" alt="" width="300px"></div>
             <div class="col-md-4 col-md-offset-1"><p>Technoloy4u</p></div>
-            <div class="col-md-4 col-md-offset-2"><p>sito</p></div>
+            <div class="col-md-4 col-md-offset-2">
+                <p>sito</p>
+                <p>sito</p>
+            </div>
         </div>
     </div>
     <span id="index_works"></span>
@@ -132,6 +136,12 @@
             </section>
         </div>
 
+        <br>
+<!-- if i remove the first iframe the facebook iframe disappears -->
+        <iframe style="display:none;"></iframe>
+        <iframe src="https://www.facebook.com/plugins/like.php?href=http://www.uniud.it/&show_faces=false" scrolling="no" frameborder="0" style="border:none; width:400px; height:80px" allowtransparency="true"></iframe>
+<!--        <iframe src="https://www.facebook.com/plugins/like.php?href=http://www.flickr.com/photos/117888312@N02/&layout=standard&width=450&height=80&show_faces=true&action=like&colorscheme=dark&font=segoe+ui" scrolling="no" frameborder="0" style="border:none; width:450px; height:80px" allowtransparency="true"></iframe>-->
+
     </div>
     <span id="index_flickr"></span>
 
@@ -147,6 +157,7 @@
     <!--        <div class="title">Photoshop</div>-->
     <!--    </div>-->
     <!--    <div class="image" id="wall_contacts" data-stellar-background-ratio="0.2"></div>-->
+
     <div class="content col-md-12" id="content_contacts">
         <div class="col-md-4">soldati.gabriele@gmail.com</div>
         <div class="col-md-4">
@@ -175,7 +186,6 @@
         <div class="col-md-12 copyright">© 2016 Gabriele Soldati. All rights reserved.</div>
     </div>
 </div>
-
 <script src="include/scripts/scripts.js"></script>
 <script type="text/javascript" src="include/gridImagesJs/jquery.gridrotator.js"></script>
 <script src="include/scripts/grid.js"></script>
