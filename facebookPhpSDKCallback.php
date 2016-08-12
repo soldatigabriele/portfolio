@@ -40,10 +40,10 @@ if(!isset($accessToken)){
 //echo '</pre>';
 $oAuth2Client = $fb->getOAuth2Client();
 $tokenMetadata = $oAuth2Client->debugToken($accessToken);
-//echo '<h3>Metadata</h3>';
-//echo '<pre>';
-//var_dump($tokenMetadata);
-//echo '</pre>';
+echo '<h3>Metadata</h3>';
+echo '<pre>';
+var_dump($tokenMetadata);
+echo '</pre>';
 
 try{
     $response = $fb->get('/me?fields=id,name,age_range,gender,hometown,email',$accessToken);
