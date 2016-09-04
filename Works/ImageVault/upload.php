@@ -111,7 +111,7 @@ if ($user->isLoggedIn()) {
             <div class="group col-md-4">
                 <div class="col-md-12">
                     <form action="index.php" method="POST">
-                        <input type="submit" class="btn btn-outline-primary" name="home" value="Homepage">
+                        <input type="submit" class="showImage btn btn-outline-primary" name="home" value="Homepage">
                     </form>
                 </div>
                 <div class="clearfix"></div>
@@ -140,7 +140,7 @@ if ($user->isLoggedIn()) {
                     <form action="upload.php" method="post" enctype="multipart/form-data">
                         <input id="file-0a" class="file" type="file" name="fileToUpload" multiple data-min-file-count="1">
                         <br>
-                        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" id="submitButton" name="submit" class="btn btn-primary">Submit</button>
 <!--                        <button type="reset" class="btn btn-default">Reset</button>-->
                     </form>
                 </div>
@@ -153,7 +153,7 @@ if ($user->isLoggedIn()) {
                          style="padding: 20px 0px 20px 0px;">
                         <div class="col-md-12">
                             <form action="" method="POST">
-                                <input type="submit" class="btn btn-outline-primary" name="mostra" value="Show Images">
+                                <input type="submit" class="showImage btn btn-outline-primary" name="mostra" value="Show Images">
                             </form>
                         </div>
                     </div>
@@ -172,9 +172,7 @@ if ($user->isLoggedIn()) {
     }
 
     include 'footer.php';
-
-
 // se l'utente non è loggato lo reindirizzo
 } else {
-    Redirect::to('home.php');
+    Redirect::to('index.php');
 }

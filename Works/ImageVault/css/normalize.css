@@ -2252,7 +2252,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
       -ms-user-select: none;
           user-select: none;
   border: 1px solid transparent;
-  padding: 0.5rem 1rem;
+  padding: 0.61rem 1rem;
   font-size: 1rem;
   /*border-radius: 0.25rem;*/
   border-radius: 1px;
@@ -3547,10 +3547,14 @@ input[type="button"].btn-block {
           user-select: none;
   background-color: #fff;
   border: 1px solid #ddd;
-  /*border-radius: 0.25rem;*/
+    /*border-radius: 0.25rem;*/
   border-radius: 0px 0px 0px 0px;
 }
-
+.kv-fileinput-caption{
+  border-radius: 0px 0px 0px 0px !important;
+}
+#submitButton{ width:135px; }
+.showImage{ width:135px; }
 .custom-file-control:lang(en)::after {
   content: "Choose file...";
 }
