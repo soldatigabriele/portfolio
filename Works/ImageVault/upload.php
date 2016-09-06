@@ -49,36 +49,48 @@ if ($user->isLoggedIn()) {
         }
     }
 
-    if (isset($_POST['mostra'])) {
+//    Show images
+    if (isset($_POST['show'])) {
 
-        echo '<div class="homeContainer" style="background: ">
-                <div class="col-md-8">
+        echo '
+            <div class="col-md-12" style="background:">
+                <div class="col-md-12">
                     <form action="upload.php" method="POST">                
                         <input type="submit" class="btn btn-outline-primary" name="indietro" value="Indietro">
                     </form>
-                     <div class="clearfix"></div><br>
+                </div>
+                <div class="clearfix"></div><br>
                ';
 
-        // genero una chiave per criptare e decriptare le immagini partendo dalla password dell'utente
+//        generating the key to decrypt the files
         $key = hash('md5', $user->data()->password);
         $crypt = new Encryption($key);
 
         $directory = 'uploads/';
         $images = $db->get('Images', ['fkUser', '=', $user->data()->idUtente]);
         $files = scandir($directory);
-
         foreach ($images->results() as $image) {
             if (file_exists($directory . $image->name)) {
                 $fileCriptato = UPLOADDIR . $image->name;
                 $fileDecriptato = UPLOADDIR . $user->data()->idUtente . $image->id . '.' . $image->ext;
                 $decrypted_string = base64_decode($crypt->decrypt(file_get_contents($fileCriptato)));
                 file_put_contents($fileDecriptato, $decrypted_string);
-                echo '<div class="col-md-8"><img src="' . $fileDecriptato . '" height="300px"></div><br>';
+                echo '
+                <div class="col-md-3" style="padding:10px;border: 0px red solid;width:280px;height:280px;">
+                <div class="col-md-11" style="padding:10px;border: 1px lightgray solid;width:260px;height:260px;">
+                    <a class="" href="'.$fileDecriptato.'" data-lightbox="example-set" data-title="">
+                        <img class="" src="'.$fileDecriptato.'" alt="" style="border:1px solid #EDEDED;max-width:230px;max-height:230px;" />
+                    </a>
+                </div>
+                </div>
+                <div class=""></div>
+                ';
             } else {
                 // delete from the DB the files that doesn't exist
                 $db->delete('Images', ['id', '=', $image->id]);
             }
         }
+//            echo '</div>';
 //        if the files are not stored in the DB, delete it
         foreach ($files as $file) {
             $images = $db->get('Images', ['name', '=', $file]);
@@ -116,32 +128,33 @@ if ($user->isLoggedIn()) {
                 </div>
                 <div class="clearfix"></div>
                 <br>
-<!--                <div class="col-md-12" style="padding: 20px 0px 20px 0px;">-->
-<!--                    <form action="upload.php" method="post" enctype="multipart/form-data">-->
-<!--                        <div class="col-md-8">-->
-<!--                            <label class="control-label">Select File</label>-->
-<!--                            <input id="input-4" name="input4[]" type="file" multiple class="file-loading">-->
-<!---->
-<!--                            <label class="custom-file">-->
-<!--                                <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload">-->
-<!--                                <span class="custom-file-control"></span>-->
-<!--                            </label>-->
-<!--                        </div>-->
-<!--                        <div class="clearfix"></div>-->
-<!--                        <br>-->
-<!--                        <div class="col-md-12">-->
-<!--                            <input type="submit" class="btn btn-outline-primary" value="Upload Image"-->
-<!--                                   name="submit">-->
-<!--                        </div>-->
-<!--                    </form>-->
-<!--                </div>-->
+                <!--                <div class="col-md-12" style="padding: 20px 0px 20px 0px;">-->
+                <!--                    <form action="upload.php" method="post" enctype="multipart/form-data">-->
+                <!--                        <div class="col-md-8">-->
+                <!--                            <label class="control-label">Select File</label>-->
+                <!--                            <input id="input-4" name="input4[]" type="file" multiple class="file-loading">-->
+                <!---->
+                <!--                            <label class="custom-file">-->
+                <!--                                <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload">-->
+                <!--                                <span class="custom-file-control"></span>-->
+                <!--                            </label>-->
+                <!--                        </div>-->
+                <!--                        <div class="clearfix"></div>-->
+                <!--                        <br>-->
+                <!--                        <div class="col-md-12">-->
+                <!--                            <input type="submit" class="btn btn-outline-primary" value="Upload Image"-->
+                <!--                                   name="submit">-->
+                <!--                        </div>-->
+                <!--                    </form>-->
+                <!--                </div>-->
                 <!-- fileupload plugin -->
                 <div class="container kv-main">
                     <form action="upload.php" method="post" enctype="multipart/form-data">
-                        <input id="file-0a" class="file" type="file" name="fileToUpload" multiple data-min-file-count="1">
+                        <input id="file-0a" class="file" type="file" name="fileToUpload" multiple
+                               data-min-file-count="1">
                         <br>
                         <button type="submit" id="submitButton" name="submit" class="btn btn-primary">Submit</button>
-<!--                        <button type="reset" class="btn btn-default">Reset</button>-->
+                        <!--                        <button type="reset" class="btn btn-default">Reset</button>-->
                     </form>
                 </div>
 
@@ -153,7 +166,8 @@ if ($user->isLoggedIn()) {
                          style="padding: 20px 0px 20px 0px;">
                         <div class="col-md-12">
                             <form action="" method="POST">
-                                <input type="submit" class="showImage btn btn-outline-primary" name="mostra" value="Show Images">
+                                <input type="submit" class="showImage btn btn-outline-primary" name="show"
+                                       value="Show Images">
                             </form>
                         </div>
                     </div>
@@ -174,5 +188,6 @@ if ($user->isLoggedIn()) {
     include 'footer.php';
 // se l'utente non è loggato lo reindirizzo
 } else {
-    Redirect::to('index.php');
+    Header('Location: index.php');
+//    Redirect::to('index.php');
 }

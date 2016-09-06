@@ -56,7 +56,7 @@ class UploadFile
         } else {
             $this->_nomeFile = $this->_file . '.' . $this->_estensione;
             if (move_uploaded_file($this->_image["tmp_name"], ($this->_nomeFile))) {
-                echo "Il file " . basename($this->_image["name"]) . " è stato caricato e cifrato correttamente.<br>";
+                echo basename($this->_image["name"]) . " has been uploaded and encrypted!<br>";
             }
         }
     }

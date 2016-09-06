@@ -33,6 +33,9 @@ require_once 'inc/init.php';
     <link href="inc/bootstrap-fileinput/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
     <script src="inc/bootstrap-fileinput/js/fileinput.js" type="text/javascript"></script>
 
+<!--    lightbox gallery-->
+    <link rel="stylesheet" type="text/css" href="../../include/lightbox/dist/css/lightbox.min.css">
+
 </head>
 <body>
 
