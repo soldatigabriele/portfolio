@@ -137,11 +137,10 @@
         </div>
 
         <br>
-<!-- if i remove the first iframe the facebook iframe disappears -->
+<!-- if I remove the first iframe the facebook iframe disappears -->
         <iframe style="display:none;"></iframe>
         <iframe src="https://www.facebook.com/plugins/like.php?href=http://www.uniud.it/&show_faces=false" scrolling="no" frameborder="0" style="border:none; width:400px; height:80px" allowtransparency="true"></iframe>
 <!--        <iframe src="https://www.facebook.com/plugins/like.php?href=http://www.flickr.com/photos/117888312@N02/&layout=standard&width=450&height=80&show_faces=true&action=like&colorscheme=dark&font=segoe+ui" scrolling="no" frameborder="0" style="border:none; width:450px; height:80px" allowtransparency="true"></iframe>-->
-
     </div>
     <span id="index_flickr"></span>
 
