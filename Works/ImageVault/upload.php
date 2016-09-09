@@ -188,6 +188,6 @@ if ($user->isLoggedIn()) {
     include 'footer.php';
 // se l'utente non è loggato lo reindirizzo
 } else {
+    echo 'Go to the <a href="index.php">login</a> page';
     Header('Location: index.php');
-//    Redirect::to('index.php');
 }
