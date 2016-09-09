@@ -16,13 +16,13 @@ require_once 'inc/init.php';
     <meta name="description" content="">
     <!-- <meta name="author" content="ScappinDebora&SoldatiGabriele">-->
 
-    <title>Technology4U-Home</title>
+    <title>ImageVault</title>
 
     <!-- Normalize CSS -->
     <link href="css/normalize.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/technology4u-homepage.css" rel="stylesheet">
+<!--    <link href="css/technology4u-homepage.css" rel="stylesheet">-->
     <script src="js/bootstrap.js"></script>
     <!-- fileinput plugin-->
 <!--    <link src="css/bootstrap3.3.4.css" rel="stylesheet">-->
@@ -217,6 +217,7 @@ require_once 'inc/init.php';
         .navbar-brand{display: none;}
      }
  --></style>
+<br>
 
 
 
