@@ -144,7 +144,6 @@
     </div>
     <span id="index_flickr"></span>
 
-    <span id="index_contacts"></span>
 
     <!--    <div class="image" id="wall_hobbies" data-stellar-background-ratio=""></div>-->
     <!--    <div class="" id="content_hobbies">-->
@@ -181,10 +180,11 @@
                 </div>
             </a>
         </div>
-        <div class="col-md-4">113, Newton Street - Manchester UK</div>
+        <div class="col-md-4">Manchester - UK</div>
         <div class="col-md-12 copyright">© 2016 Gabriele Soldati. All rights reserved.</div>
     </div>
 </div>
+    <span id="index_contacts"></span>
 <script src="include/scripts/scripts.js"></script>
 <script type="text/javascript" src="include/gridImagesJs/jquery.gridrotator.js"></script>
 <script src="include/scripts/grid.js"></script>
