@@ -45,7 +45,7 @@
 </div>
 
 
-<div class="page" style="background: ">
+<div class="page" style="">
     <div class="firstImage" id="wall_about" data-stellar-background-ratio="0.5"></div>
     <div class="content" id="content_about">
         <div class="title">WHO AM I</div>
@@ -99,26 +99,37 @@
         <div class="title">Websites</div>
         <br><br>
         <div class="col-xl-12" style="max-width:1280px; margin: auto;">
-            <div class="col-md-4 col-md-offset-1 workImage"style="border: 1px #acacac solid;">
-                <img src="img/vault.jpg" alt="">
+            <a href="Works/ImageVault/index.php">
+                <div class="col-md-4 col-md-offset-1 workImage" style="border: 1px #acacac solid;">
+                    <img class="websiteImage" src="img/vault.jpg" alt="">
+                </div>
+            </a>
+            <a href="Works/Laboa/atrium.php">
+                <div class="col-md-4 col-md-offset-2 workImage" style="border: 1px #acacac solid;">
+                    <img class="websiteImage" src="img/laboa.png" alt="">
+                </div>
+            </a>
+            <div class="col-md-4 col-md-offset-1 imageLink"><a href="Works/ImageVault/index.php"><p>ImageVault</p></a>
             </div>
-            <div class="col-md-4 col-md-offset-2 workImage"style="border: 1px #acacac solid;">
-                <img src="img/laboa.png" alt="">
+            <div class="col-md-4 col-md-offset-2 imageLink"><a href="Works/Laboa/atrium.php"><p>Laboa.org</p></a></div>
+            <div class="col-md-12"><br></div>
+            <a href="Works/Technology4u/atrium.php">
+                <div class="col-md-4 col-md-offset-1 workImage" style="border: 1px #acacac solid;">
+                    <img class="websiteImage" src="img/tech4u.jpg">
+                </div>
+            </a>
+            <div class="col-md-4 col-md-offset-2 workImage" style="border: 1px #acacac solid;">
+                <img class="websiteImage" src="img/8.jpg" alt="">
             </div>
-            <div class="col-md-4 col-md-offset-1 workImage"><a href="Works/ImageVault/index.php"><p>ImageVault</p></a></div>
-            <div class="col-md-4 col-md-offset-2 workImage"><a href="Works/Laboa/atrium.php"><p>Laboa.org</p></a></div>
-            <div class="col-md-12" > <br> </div>
-            <div class="col-md-4 col-md-offset-1 workImage"style="border: 1px #acacac solid;">
-                <img src="img/tech4u.jpg">
-            </div>
-            <div class="col-md-4 col-md-offset-2 workImage"style="border: 1px #acacac solid;">
-                <img src="img/8.jpg" alt="">
-            </div>
-            <div class="col-md-4 col-md-offset-1 workImage"><a href="Works/Technology4u/atrium.php"><p>Technoloy4u</p></a></div>
-            <div class="col-md-4 col-md-offset-2 workImage">
+            <div class="col-md-4 col-md-offset-1 imageLink"><a href="Works/Technology4u/atrium.php"><p>Technoloy4u</p>
+                </a></div>
+            <div class="col-md-4 col-md-offset-2 imageLink">
                 <p>sito</p>
             </div>
         </div>
+        <div class="clearfix">
+        </div>
+        <br><br>
     </div>
     <span id="index_works"></span>
 

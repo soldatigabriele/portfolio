@@ -33,6 +33,7 @@ function setBindings() {
 }
     //jQuery images
     $(document).ready(function () {
+        // slide effect
         var n = 1;
         $('#slide1').appear();
         $('#slide1').on('appear', function () {
@@ -61,5 +62,14 @@ function setBindings() {
             resize($(this).attr("id"));
         });
 
+        //set image opacity on mouse over
+        $(".websiteImage").mouseover(function(){$(this).animate({
+            opacity:0.5,
+        }, 300);
+        });
+        $(".websiteImage").mouseout(function(){$(this).animate({
+            opacity:1,
+        }, 300);
+        });
     })
 ;
