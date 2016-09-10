@@ -43,7 +43,7 @@ if (Input::exists()) {
             'password' => array(
                 'name' => 'password',
                 'required' => true,
-                'min' => 8
+                'min' => 4
             ),
             'confermapassword' => array(
                 'required' => true,
