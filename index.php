@@ -38,7 +38,7 @@
         <a id="about" href="#">About Me</a> |
         <a id="web" href="#">Skills</a> |
         <a id="frameworks" href="#">Frameworks</a> |
-        <a id="works" href="#">Works</a> |
+        <a id="works" href="#">Websites</a> |
         <a id="flickr" href="#">Flickr</a> |
         <a id="contacts" href="#">Contacts</a>
     </nav>
@@ -95,23 +95,27 @@
     <span id="index_frameworks"></span>
 
     <div class="image" id="wall_works" data-stellar-background-ratio="0.2"></div>
-    <div class="content" id="content_works">
-        <div class="title">Previous Works</div>
+    <div class="content" id="content_works" style="">
+        <div class="title">Websites</div>
         <br><br>
-        <div class="col-md-12">
-            <div class="col-md-4 col-md-offset-1 workImage"><img src="img/vault.jpg" alt="" height="" width="300px">
+        <div class="col-xl-12" style="max-width:1280px; margin: auto;">
+            <div class="col-md-4 col-md-offset-1 workImage"style="border: 1px #acacac solid;">
+                <img src="img/vault.jpg" alt="">
             </div>
-            <div class="col-md-4 col-md-offset-2 workImage"><img src="img/laboa.png" alt="" width="300px"></div>
-            <div class="col-md-4 col-md-offset-1"><a href="Works/ImageVault/index.php"><p>ImageVault</p></a></div>
-            <div class="col-md-4 col-md-offset-2"><p>Laboa.org</p></div>
-            <div class="col-md-12" style="">
-                <br>
+            <div class="col-md-4 col-md-offset-2 workImage"style="border: 1px #acacac solid;">
+                <img src="img/laboa.png" alt="">
             </div>
-            <div class="col-md-4 col-md-offset-1 workImage"><img src="img/tech4u.png" alt="" width="300px"></div>
-            <div class="col-md-4 col-md-offset-2 workImage"><img src="img/8.jpg" alt="" width="300px"></div>
-            <div class="col-md-4 col-md-offset-1"><p>Technoloy4u</p></div>
-            <div class="col-md-4 col-md-offset-2">
-                <p>sito</p>
+            <div class="col-md-4 col-md-offset-1 workImage"><a href="Works/ImageVault/index.php"><p>ImageVault</p></a></div>
+            <div class="col-md-4 col-md-offset-2 workImage"><p>Laboa.org</p></div>
+            <div class="col-md-12" > <br> </div>
+            <div class="col-md-4 col-md-offset-1 workImage"style="border: 1px #acacac solid;">
+                <img src="img/tech4u.jpg">
+            </div>
+            <div class="col-md-4 col-md-offset-2 workImage"style="border: 1px #acacac solid;">
+                <img src="img/8.jpg" alt="">
+            </div>
+            <div class="col-md-4 col-md-offset-1 workImage"><a href="Works/Technology4u/index.php"><p>Technoloy4u</p></a></div>
+            <div class="col-md-4 col-md-offset-2 workImage">
                 <p>sito</p>
             </div>
         </div>
@@ -137,10 +141,12 @@
         </div>
 
         <br>
-<!-- if I remove the first iframe the facebook iframe disappears -->
+        <!-- if I remove the first iframe the facebook iframe disappears -->
         <iframe style="display:none;"></iframe>
-        <iframe src="https://www.facebook.com/plugins/like.php?href=http://www.uniud.it/&show_faces=false" scrolling="no" frameborder="0" style="border:none; width:400px; height:80px" allowtransparency="true"></iframe>
-<!--        <iframe src="https://www.facebook.com/plugins/like.php?href=http://www.flickr.com/photos/117888312@N02/&layout=standard&width=450&height=80&show_faces=true&action=like&colorscheme=dark&font=segoe+ui" scrolling="no" frameborder="0" style="border:none; width:450px; height:80px" allowtransparency="true"></iframe>-->
+        <iframe src="https://www.facebook.com/plugins/like.php?href=http://www.uniud.it/&show_faces=false"
+                scrolling="no" frameborder="0" style="border:none; width:400px; height:80px"
+                allowtransparency="true"></iframe>
+        <!--        <iframe src="https://www.facebook.com/plugins/like.php?href=http://www.flickr.com/photos/117888312@N02/&layout=standard&width=450&height=80&show_faces=true&action=like&colorscheme=dark&font=segoe+ui" scrolling="no" frameborder="0" style="border:none; width:450px; height:80px" allowtransparency="true"></iframe>-->
     </div>
     <span id="index_flickr"></span>
 
@@ -184,7 +190,7 @@
         <div class="col-md-12 copyright">© 2016 Gabriele Soldati. All rights reserved.</div>
     </div>
 </div>
-    <span id="index_contacts"></span>
+<span id="index_contacts"></span>
 <script src="include/scripts/scripts.js"></script>
 <script type="text/javascript" src="include/gridImagesJs/jquery.gridrotator.js"></script>
 <script src="include/scripts/grid.js"></script>

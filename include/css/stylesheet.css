@@ -64,7 +64,13 @@ a:active{color:lightslategray;text-decoration:none;}
 }
 
 .workImage{
-    border: 1px #8699a4 solid;
+    /*height: 20vh;*/
+    width:400px;
+}
+
+.workImage>img{
+    max-height:200px;
+    width:100%;
 }
 
 #content_frameworks {
