@@ -103,34 +103,40 @@
                     <img class="websiteImage" src="img/vault.jpg" alt="">
                 </div>
             </a>
-            <a href="Works/Laboa/atrium.php">
+            <a href="Works/Laboa/overview.php">
                 <div class="col-md-4 col-md-offset-2 workImage">
                     <img class="websiteImage" src="img/laboa.png" alt="">
                 </div>
             </a>
             <div class="col-md-4 col-md-offset-1 imageLink"><a href="Works/ImageVault/index.php"><p>ImageVault</p></a>
             </div>
-            <div class="col-md-4 col-md-offset-2 imageLink"><a href="Works/Laboa/atrium.php"><p>Laboa.org</p></a></div>
+            <div class="col-md-4 col-md-offset-2 imageLink"><a href="Works/Laboa/overview.php"><p>Laboa.org</p></a></div>
             <div class="col-md-12"><br></div>
-            <a href="Works/Technology4u/atrium.php">
+            <a href="Works/Technology4u/overview.php">
                 <div class="col-md-4 col-md-offset-1 workImage">
                     <img class="websiteImage" src="img/tech4u.jpg">
                 </div>
             </a>
-            <div class="col-md-4 col-md-offset-2 workImage">
-                <img class="websiteImage" src="img/8.jpg" alt="">
+            <a href="Works/EasyRetrieve/overview.php">
+                <div class="col-md-4 col-md-offset-2 workImage">
+                    <img class="websiteImage" src="img/easyRetrieve.png" alt="">
+                </div>
+            </a>
+            <div class="col-md-4 col-md-offset-1 imageLink">
+                <a href="Works/Technology4u/overview.php">
+                    <p>Technoloy4u</p>
+                </a>
             </div>
-            <div class="col-md-4 col-md-offset-1 imageLink"><a href="Works/Technology4u/atrium.php"><p>Technoloy4u</p>
-                </a></div>
             <div class="col-md-4 col-md-offset-2 imageLink">
-                <p>EasyRetrieve</p>
+                <a href="Works/EasyRetrieve/overview.php">
+                    <p>EasyRetrieve</p>
+                </a>
             </div>
         </div>
-        <div class="clearfix">
-        </div>
-        <br><br>
     </div>
     <span id="index_works"></span>
+    <div class="clearfix"></div>
+    <br><br>
 
     <div class="image" id="wall_flickr" data-stellar-background-ratio="0.2"></div>
     <div class="content" id="content_flickr">

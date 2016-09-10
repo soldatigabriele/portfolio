@@ -1,0 +1,24 @@
+****************//EASYRETRIEVE//****************
+
+
+
+INSTALLAZIONE
+
+Per installare EasyRetrieve è necessario seguire i seguenti passaggi:
+
+-caricare la cartella EasyRetrieve su un sito web o all’interno della cartella “htdocs” di XAMPP; 
+- aprire il file "include/conf.php" e inserire le directory del sito su cui è caricata l'applicazione (o lasciare localhost);
+- aprire il file "include/function.php" e inserire le credenziali di accesso al database MySQL;
+- importare il database “my_gabrielesoldati”.
+
+Le credenziali per accedere al sistema come amministratore sono:
+username: admin
+password: easyretrieve2015
+
+
+
+
+
+
+************************************************
+Gabriele Soldati 2015 EasyRetrieve

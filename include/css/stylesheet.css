@@ -83,8 +83,8 @@ border: 1px #acacac solid;
     height:100%;
 }
 .websites{
+    padding:30px 100px 0px 100px;
     max-width: 1280px;
-    background:red;
 }
 #content_frameworks {
     margin-top: 5%;
@@ -95,8 +95,6 @@ border: 1px #acacac solid;
 #content_about {
     height: 95vh;
     width: 100%;
-    /*display: table-cell;*/
-    /*vertical-align: middle;*/
     margin-top: 5%;
     background-image: url("../../img/bg1.png");
     background-size:100% ;
@@ -110,8 +108,8 @@ border: 1px #acacac solid;
 
 #content_works{
     height:95vh;
-    margin-top: 5%;
-    width:100%
+    margin-top: 2%;
+    width:100%;
 }
 
 #content_flickr {
