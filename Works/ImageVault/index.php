@@ -9,8 +9,20 @@ if (!$user->isLoggedIn()) {
 require_once('navigation.php');
 if ($user->isLoggedIn()) {
 ?>
-    <div  style="width:450px;margin:auto;">
 
+<div class="col-md-12">
+
+    Store your images in a highly secure way. When you upload your images both the name and the content are encrypted.
+    Even the owner of the website cannot access your data without knowing your password.
+    <ul style="">
+        <li>Jpg and png types supported</li>
+        <li>Unlimited images upload</li>
+        <li>Up to 5MB per file</li>
+        <li>Secure data storage with name and content encryption</li>
+    </ul>
+</div>
+
+    <div  style="width:450px;margin:auto;">
         <div class="col-md-12 offset-md-2">
             <h3>Welcome, <?php echo escape($user->data()->username); ?>!</h3>
         </div>

@@ -106,7 +106,7 @@
                 <img src="img/laboa.png" alt="">
             </div>
             <div class="col-md-4 col-md-offset-1 workImage"><a href="Works/ImageVault/index.php"><p>ImageVault</p></a></div>
-            <div class="col-md-4 col-md-offset-2 workImage"><p>Laboa.org</p></div>
+            <div class="col-md-4 col-md-offset-2 workImage"><a href="Works/Laboa/atrium.php"><p>Laboa.org</p></a></div>
             <div class="col-md-12" > <br> </div>
             <div class="col-md-4 col-md-offset-1 workImage"style="border: 1px #acacac solid;">
                 <img src="img/tech4u.jpg">
