@@ -7,35 +7,23 @@
                 <div class="footerdesktop">
                     <div class="col-md-4">
                         <li class="item">
-                            <p><h4>Informazioni</h4></p>                       
-                            <ul><a href="#">Contattaci</a></ul>
-                            <ul><a href="#">Spedizioni</a></ul>
-                            <ul><a href="#">Resi</a></ul>
-                            <ul><a href="#">Pagamenti</a></ul>
-                            <ul><a href="#">Condizioni di vendita</a></ul>
-                            <ul><a href="#">Chi siamo</a></ul>
-                            <ul><a href="#">Privacy</a></ul>
-                        </li>
-                    </div>
-                    <div class="col-md-4">
-                        <li class="item">
-                            <p><h4>Il mio account</h4></p>
-                            <ul><a href="carrello.php">Ordini</a></ul>
-                            <ul><a href="cartacredito.php">Carte di credito</a></ul>
-                            <ul><a href="home.php">Informazioni personali</a></ul>
+                            <p><h4>My account</h4></p>
+                            <ul><a href="carrello.php">Orders</a></ul>
+                            <ul><a href="cartacredito.php">Credit Cards</a></ul>
+                            <ul><a href="home.php">Control Panel</a></ul>
 
                         </li>
                     </div>
+                    <div class="col-md-4"></div>
                     <div class="col-md-4">
                         <li class="item">
-                            <p><h4>Informazioni negozio</h4></p>
+                            <p><h4>Shop Details</h4></p>
                             <ul>
                                 <p>Technology4U s.p.a.</p>
-                                <p>via Garibaldi 58/A</p>
-                                <p>Pordenone (PN) 33170 Italia</p>
-                                <p>Contattaci subito: 123-456789</p>
+                                <p>Newton Street 58/A</p>
+                                <p>Manchester - UK</p>
+                                <p>Call now: 123-456789</p>
                                 <p>E-mail: <a href="mailto:admin@technology4u.it">admin@technology4u.it</a></p></br></br>
-                                <p style="font-style:italic;">Copyright &copy; 2016</p>
                             </ul>
 
                         </li>                    
