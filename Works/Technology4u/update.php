@@ -65,19 +65,19 @@ if(Input::exists()) {
     <div class="col-md-5">
         <form action="" method="post">
             <div class="field" style="padding-top:10px;">
-                <label for="nome">Nome</label>
+                <label for="nome">Name</label>
                 <input class="form-control" type="text" name="nome" value="<?php echo escape($user->data()->nome); ?>">
             </div>
             <div class="field" style="padding-top:10px;">
-                <label for="cognome">Cognome</label>
+                <label for="cognome">Surname</label>
                 <input class="form-control" type="text" name="cognome" value="<?php echo escape($user->data()->cognome); ?>">
             </div>
             <div class="field" style="padding-top:10px;">
-                <label for="codiceFiscale">CodiceFiscale</label>
+                <label for="codiceFiscale">NIN</label>
                 <input class="form-control" type="text" name="codiceFiscale" maxlength="16" value="<?php echo escape($user->data()->codiceFiscale); ?>">
             </div>
             <div class="field" style="padding-top:10px;">
-                <label for="mail">Mail</label>
+                <label for="mail">eMail</label>
                 <input class="form-control" type="text" name="mail" value="<?php echo escape($user->data()->mail); ?>">
                 <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
             </div>

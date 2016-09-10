@@ -77,7 +77,7 @@
 
                                         <!--Pulsante aggiungi al carrello-->
                                         <form name="aggiungicarrello" action="carrello.php" target="_top" method="post">
-                                            <p style="padding-left:10px;">Quantità:
+                                            <p style="padding-left:10px;">Quantity:
                                                 <select Name="numeroDisponibilita">
                                                     <?php
                                                         $disp=min(5,$rs[numeroDisponibilita]);
@@ -136,11 +136,11 @@
 
                           if ($pag > 1){
                             echo "<a href=$cong" . ($pag - 1) . ">";
-                            echo "Indietro</a>&nbsp; ";
+                            echo "Previous Page</a>&nbsp; ";
                           } 
                           if ($all_pages > $pag){
                             echo "<a href=$cong" . ($pag + 1) . ">";
-                            echo "Avanti</a>";
+                            echo "Next page</a>";
                           } 
                         }
                         ?>

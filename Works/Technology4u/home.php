@@ -15,7 +15,7 @@
 
                 <!-- il nome dell'utente viene ritornato tramite la funzione escape, per prevenire attachi di tipo cross site scripting  -->
                 <div class="col-md-12 spacing">
-                    <h3>Benvenuto, <a href="profile.php?username=<?php echo escape($user->data()->username);?>"><?php echo escape($user->data()->username); ?></a>! </h3>
+                    <h3>Welcome, <a href="profile.php?username=<?php echo escape($user->data()->username);?>"><?php echo escape($user->data()->username); ?></a>! </h3>
                 </div>
                     <div class="clearfix"></div><br>
                 <?php

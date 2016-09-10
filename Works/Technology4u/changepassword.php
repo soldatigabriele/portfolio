@@ -69,17 +69,17 @@ include_once 'navigation.php';
     <div class="col-md-5">
         <form action="" method="post">
             <div class="field <?php if($errorOP){echo 'has-error';}?>" style="padding-top:10px;">
-                <label for="password_corrente">Password attuale</label>
+                <label for="password_corrente">Old Password</label>
                 <input class="form-control" type="password" name="password_corrente" <?php if($OldPassRequired){echo 'placeholder="required"';}?> id="password_corrente">
             </div>
 
             <div class="field <?php if($errorPassword){echo 'has-error';}?>" style="padding-top:10px;">
-                <label for="nuova_password">Nuova Password</label>
+                <label for="nuova_password">New Password</label>
                 <input class="form-control" type="password" name="nuova_password" id="nuova_password" <?php if($NewPassRequired){echo 'placeholder="required"';}?>>
             </div>
 
             <div class="field <?php if($errorConfNP){echo 'has-error';}?>" style="padding-top:10px;">
-                <label for="conferma_nuova_password">Conferma Nuova Password</label>
+                <label for="conferma_nuova_password">New Password Again</label>
                 <input class="form-control" type="password" name="conferma_nuova_password" id="conferma_nuova_password" <?php if($ConfNewPassRequired){echo 'placeholder="required"';}?>>
             </div>
             <br>

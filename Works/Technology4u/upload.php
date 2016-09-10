@@ -44,7 +44,7 @@ if ($user->isLoggedIn()) {
         echo '<div class="homeContainer" style="background: ">
                 <div class="col-md-8">
                     <form action="upload.php" method="POST">                
-                        <input type="submit" class="btn btn-primary" name="indietro" value="Indietro">
+                        <input type="submit" class="btn btn-primary" name="indietro" value="Back">
                     </form>
                      <div class="clearfix"></div><br>
                ';
@@ -61,27 +61,27 @@ if ($user->isLoggedIn()) {
                     $decrypted_string = base64_decode($crypt->decrypt(file_get_contents($fileCriptato)));
                     //salvataggio del file decodificato
                     file_put_contents($fileDecriptato, $decrypted_string);
-                    echo '<div class="col-md-8">Carta Identità fronte:<br> <img src="' . $fileDecriptato . '" height="300px"></div>';
+                    echo '<div class="col-md-8">ID 1:<br> <img src="' . $fileDecriptato . '" height="300px"></div>';
                 }
                 if ($CIr) {
                     $fileCriptato = UPLOADDIR . hash('md5', 'CIr' . $user->data()->idUtente);
                     $fileDecriptato = UPLOADDIR . $user->data()->idUtente . 'CIr.jpg';
                     $decrypted_string = base64_decode($crypt->decrypt(file_get_contents($fileCriptato)));
                     file_put_contents($fileDecriptato, $decrypted_string);
-                    echo '<div class="col-md-8">Carta Identità retro:<br> <img src="' . $fileDecriptato . '" height="300px"></div>';
+                    echo '<div class="col-md-8">ID 2:<br> <img src="' . $fileDecriptato . '" height="300px"></div>';
                 }
                 if ($CF) {
                     $fileCriptato = UPLOADDIR . hash('md5', 'CF' . $user->data()->idUtente);
                     $fileDecriptato = UPLOADDIR . $user->data()->idUtente . 'CF.jpg';
                     $decrypted_string = base64_decode($crypt->decrypt(file_get_contents($fileCriptato)));
                     file_put_contents($fileDecriptato, $decrypted_string);
-                    echo '<div class="col-md-8">Codice Fiscale: <br><img src="' . $fileDecriptato . '" height="300px"></div>';
+                    echo '<div class="col-md-8">Passport: <br><img src="' . $fileDecriptato . '" height="300px"></div>';
                 }
 
                 echo '
                     <div class="clearfix"></div><br>
                         <div class="col-md-12">
-                                per uscire in modo sicuro <a href="upload.php">clicca qui</a> 
+                                Go <a href="upload.php">back</a> 
                         </div>
                     </div>
                     <div class="clearfix"></div><br>
@@ -99,16 +99,16 @@ if ($user->isLoggedIn()) {
                 <div class="clearfix"></div><br>
                 <div class="col-md-12" style="padding: 20px 0px 20px 0px;">
                     <div class="col-md-12" style="padding-top:10px;">
-                        <p>È possibile caricare solo file jpg non superiori a 5MB.</p><br>
+                        <p>You can upload only Jpegs smaller than 5MB</p><br>
                         <form action="upload.php" class="form-group" method="post" enctype="multipart/form-data">
                             <div class="col-md-4">
-                                <input type="hidden" name="titolo" value="CIf"><?php if ($CIf) {echo 'È presente la carta di identità fronte<br>';}else{echo 'Carta Identità Fronte:';} ?>
+                                <input type="hidden" name="titolo" value="CIf"><?php if ($CIf) {echo 'Scan already exists<br>';}else{echo 'ID 1:';} ?>
                             </div>
                             <div class="col-md-4">
                                     <input type="file" name="fileToUpload" id="fileToUpload">
                             </div>
                             <div class="col-md-4">
-                                <input type="submit" class="form-control btn btn-success" value="<?php if ($CIf) {echo 'Aggiorna Documento';}else{echo 'Carica Documento';} ?>" name="submit">
+                                <input type="submit" class="form-control btn btn-success" value="<?php if ($CIf) {echo 'Update';}else{echo 'Upload';} ?>" name="submit">
                             </div>
                         </form>
                     </div>
@@ -116,13 +116,13 @@ if ($user->isLoggedIn()) {
                     <div class="col-md-12">
                         <form action="upload.php" method="post" enctype="multipart/form-data">
                             <div class="col-md-4">
-                                <input type="hidden" name="titolo" value="CIr"><?php if ($CIr) {echo 'È presente la carta di identità retro<br>';}else{echo 'Carta Identità Retro:';} ?>
+                                <input type="hidden" name="titolo" value="CIr"><?php if ($CIr) {echo 'Scan already exists<br>';}else{echo 'ID 2:';} ?>
                             </div>
                             <div class="col-md-4">
                                 <input type="file" name="fileToUpload" id="fileToUpload">
                             </div>
                             <div class="col-md-4">
-                                <input type="submit" class="form-control btn btn-success" value="<?php if ($CIr) {echo 'Aggiorna Documento';}else{echo 'Carica Documento';} ?>" name="submit">
+                                <input type="submit" class="form-control btn btn-success" value="<?php if ($CIr) {echo 'Update';}else{echo 'Upload';} ?>" name="submit">
                             </div>
                         </form>
                     </div>
@@ -130,13 +130,13 @@ if ($user->isLoggedIn()) {
                     <div class="col-md-12">
                         <form action="upload.php" method="post" enctype="multipart/form-data">
                             <div class="col-md-4">
-                                <input type="hidden" name="titolo" value="CF"><?php if ($CF) {echo 'È presente  il codice fiscale<br>';}else{echo 'Codice Fiscale:';} ?>
+                                <input type="hidden" name="titolo" value="CF"><?php if ($CF) {echo 'Scan already exists<br>';}else{echo 'Passport:';} ?>
                             </div>
                             <div class="col-md-4">
                                 <input type="file" name="fileToUpload" id="fileToUpload">
                             </div>
                             <div class="col-md-4">
-                                <input type="submit" class="form-control btn btn-success" value="<?php if ($CF) {echo 'Aggiorna Documento';}else{echo 'Carica Documento';} ?>" name="submit">
+                                <input type="submit" class="form-control btn btn-success" value="<?php if ($CF) {echo 'Update';}else{echo 'Upload';} ?>" name="submit">
                             </div>
                         </form>
                     </div>
@@ -149,7 +149,7 @@ if ($user->isLoggedIn()) {
                          style="padding: 20px 0px 20px 0px;">
                         <div class="col-md-12">
                             <form action="" method="POST">
-                                <input type="submit" class="btn btn-primary" name="mostra" value="Mostra Documenti">
+                                <input type="submit" class="btn btn-primary" name="mostra" value="Show Documents">
                             </form>
                         </div>
                     </div>

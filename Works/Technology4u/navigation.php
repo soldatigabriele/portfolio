@@ -93,7 +93,7 @@ require_once 'inc/init.php';
 
             <?php
                 }else{
-                    echo "<p style='text-align: right; color:#D4D4D4;margin-top:5px;margin-right:-35px;'>Salve  <a href=home.php style='color:#FFB300'><b>".escape($user->data()->username)."</a><br><a href=logout.php style='color:#BED63A; font-style:italic; font-weight:normal;'>Logout</a>";
+                    echo "<p style='text-align: right; color:#D4D4D4;margin-top:5px;margin-right:-35px;'><a href=home.php style='color:#FFB300'><b>Control Panel</a><br><a href=logout.php style='color:#BED63A; font-style:italic; font-weight:normal;'>Logout</a>";
                     echo"<a href='carrello.php' title='Vai al tuo carrello' style='margin-left:5px;'><img src='img/logocarrello.png' height='25px'  /></a></b></p>"; //se sono collegato
                     /*if($_SESSION['admin']==1){
                         echo "<a href='panadmin.php' title='Vai al pannello amministrazione'><img src='img/admin.png' height='25px'  /></a></b>";

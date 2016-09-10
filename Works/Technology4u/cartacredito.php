@@ -40,16 +40,17 @@ if (Input::exists()) {
 
             try {
                 $cc = DB::getInstance();
-                $cc->insert('cartacredito', array(
+                    $arr = array(
                     'numeroCarta' => $numeroCartaCriptato,
                     'dataScadenza' => Input::get('dataScadenza'),
                     'ccv' => $ccvCriptato,
                     'intestatario' => $intestatarioCriptato,
                     'fkUtente' => $user->data()->idUtente,
-                    'fkMetodoPagamento' => Input::get('circuito')
-                ));
+                    'fkCircuito' => Input::get('circuito')
+                );
+                $cc->insert('cartacredito', $arr);
 
-                echo 'Dati inseriti correttamente';
+                echo 'Card details saved';
             } catch (Exception $e) {
                 die($e->getMessage());
             }
@@ -70,15 +71,15 @@ if (Input::exists()) {
         <?php if (!isset($_POST['mostraCarta']) && !isset($_POST['rivelaCarte']) ) { ?>
             <form action="" method="post" id="form">
                 <div class="field" style="padding-top:10px;">
-                    <label for="numeroCarta">Numero Carta</label>
+                    <label for="numeroCarta">Card Number</label>
                     <input class="form-control" id="nc" maxlength="16" type="text" name="numeroCarta" onkeyup="checkInp(this.id)" >
                 </div>
                 <div class="field" style="padding-top:10px;">
-                    <label for="intestatario">Intestatario</label>
+                    <label for="intestatario">Name on the card</label>
                     <input class="form-control" type="text" name="intestatario">
                 </div>
                 <div class="field" style="padding-top:10px;">
-                    <label for="dataScadenza">Data Scadenza</label>
+                    <label for="dataScadenza">Exp.</label>
                     <input class="form-control" type="text" maxlength="10" name="dataScadenza" placeholder="YYYY/MM/DD">
                     <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
                 </div>
@@ -87,14 +88,14 @@ if (Input::exists()) {
                     <input class="form-control" id="cvv" maxlength="3" type="text" name="ccv" onkeyup="checkInp(this.id)">
                 </div>
                 <div class="field col-md-4" style="padding-top:10px;">
-                    <label for="circuito">Circuito</label>
+                    <label for="circuito">Circuit</label>
                     <select name="circuito" class="form-control">
 
                         <?php
                         $circuiti = DB::getInstance();
-                        $circuiti->get('metodopagamento',['idMetodoPagamento','>','0']);
+                        $circuiti->get('circuito',['idCircuito','>','0']);
                         foreach($circuiti->results() as $circuito){
-                            echo '<option value="'.$circuito->idMetodoPagamento.'">'.$circuito->tipo.'</option>';
+                            echo '<option value="'.$circuito->idCircuito.'">'.$circuito->tipo.'</option>';
                         };
                         ?>
 
@@ -114,7 +115,7 @@ if (Input::exists()) {
                 <div class="clearfix"></div><br>
                 <form action = "" method = "POST" >
                 <div class="field" >
-                    <input class="form-control btn btn-primary" type="submit" value="Mostra Carte Salvate" name="mostraCarta" >
+                    <input class="form-control btn btn-primary" type="submit" value="Show Cards" name="mostraCarta" >
                 </div >
             </form >
                 <?php } ?>
@@ -127,7 +128,7 @@ if (Input::exists()) {
                     </div>
                     <div class="clearfix"></div><br>
                     <div class="field">
-                        <input class="form-control btn btn-success" type="submit" value="Mostra" name="rivelaCarte">
+                        <input class="form-control btn btn-success" type="submit" value="Show" name="rivelaCarte">
                     </div>
                 </form>
             <?php
@@ -150,13 +151,13 @@ if (Input::exists()) {
                     echo ' 
                             <form action="cartacredito.php" method="POST">
                                 <div class="field">
-                                    <input class="form-control btn btn-success" id="round" type="submit" value="Indietro" name="indietro">
+                                    <input class="form-control btn btn-success" id="round" type="submit" value="Back" name="indietro">
                                 </div>
                             </form>
 
                         ';
                 }else{
-                    echo 'password errata';
+                    echo 'password wrong';
                 }
             }
         } ?>

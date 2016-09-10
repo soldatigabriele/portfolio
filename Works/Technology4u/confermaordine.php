@@ -83,15 +83,15 @@
                                         $ModOrdiniCarrello="UPDATE carrello SET ordine=$numordine WHERE ordine=0 AND fkUtente=$_SESSION[IDutente]";
                                         mysql_query($ModOrdiniCarrello);
 
-                                        echo "Un nuovo ordine è stato preso in carico dal nostro sistema, nel caso ci siano problemi vi preghiamo di contattare l'azienda.";
+                                        echo "Thanks for your order. We’ll let you know once your item(s) have dispatched.";
 
 
                                     }else{
-                                        echo "Il codice promozionale inserito è già stato utilizzato.";
+                                        echo "Wrong Code";
                                     }
 
                                 }else{
-                                    echo "Il codice promozionale inserito non esiste.";
+                                    echo "Wrong Code";
                                 }
                             /*}else{
                                 echo "Il codice promozionale inserito non esiste.2";
@@ -113,7 +113,7 @@
                             $ModOrdiniCarrello="UPDATE carrello SET ordine=$numordine WHERE ordine=0 AND fkUtente=$_SESSION[IDutente]";
                             mysql_query($ModOrdiniCarrello);
 
-                            echo "Un nuovo ordine è stato preso in carico dal nostro sistema, nel caso ci siano problemi vi preghiamo di contattare l'azienda.";
+                            echo "Thanks for your order. We’ll let you know once your item(s) have dispatched.";
 
                         }
                            
@@ -138,7 +138,7 @@
                 <div class="col-md-8">
                     <form class="form-group" name="datipersonali" action="" target="_top" method="POST">
                         <div class="col-md-8">
-                            Seleziona Carta di Credito:
+                            Select Payment Card:
                             <select class="form-control" name="Circuito" style="float:left;">
 
                                 <?php
@@ -160,21 +160,21 @@
                         <div class="clearfix"></div><br/> <!--A capo + spaziatura-->
                         
                         <div class="col-md-8 <?php if ($error){echo 'has-error';} ?>">
-                            Indirizzo per la spedizione: *
+                           Delivery Address: (*required)
                             <input class="form-control" name="indirizzo" type="text" maxlength="70" <?php if($error){echo 'placeholder="required"';}?> />
                         </div>
                         
                         <div class="clearfix"></div><br/> <!--A capo + spaziatura-->
                         
                         <div class="col-md-8">
-                            Codice Promozionale: 
+                            Promotional code:
                             <input class="form-control" name="codicepromo" type="text" maxlength="10" />
                         </div>
                         
                         <div class="clearfix"></div><br/> <!--A capo + spaziatura-->
                         
                         <div class="col-md-8">
-                            <input class="btn btn-success" type="submit" src="img/carrello.png" value="Procedi" name="Procedi" />
+                            <input class="btn btn-success" type="submit" src="img/carrello.png" value="Place Order" name="Procedi" />
                         </div>
                     </form>
                 </div>

@@ -58,9 +58,9 @@ $resultOrdini=mysql_query($QueryOrdini);
                         <thead>
                            <tr style="font-weight: 600;">
                                 <td>ID</td>
-                                <td>Titolo</td>
-                                <td>Quantità</td>
-                                <td>Prezzo</td>
+                                <td>Product</td>
+                                <td>Quantity</td>
+                                <td>Price</td>
                                 <td></td>
                             </tr>
                         </thead>
@@ -78,7 +78,7 @@ $resultOrdini=mysql_query($QueryOrdini);
                                     echo"<td>$rsCarrello[prezzo]</td>";
                                     echo"<td>
                                             <form nome=\"elimina\" action=\"carrello.php\" target=\"_top\" method=\"post\">
-                                            <input class=\"btn btn-success\" type=\"submit\" src=\"img/meno.png\" Value='Elimina' Name='Togli_dal_Carrello' />
+                                            <input class=\"btn btn-success\" type=\"submit\" src=\"img/meno.png\" Value='Delete' Name='Togli_dal_Carrello' />
                                             <input type=\"hidden\" Value=$rsCarrello[idProdotto] Name='idProdotto' />
                                             </form>
                                         </td>";
@@ -99,22 +99,22 @@ $resultOrdini=mysql_query($QueryOrdini);
                    </table>
                     <?php if($row!=0){ ?>
                         <form name="confermaordine" action="confermaordine.php" target="_top" method="post">                
-                            <input class="btn btn-success" type="submit" src="img/carrello.png" style="margin-left:20px;" Value='Conferma' Name='Conferma_Ordine' />
+                            <input class="btn btn-success" type="submit" src="img/carrello.png" style="margin-left:20px;" Value='Confirm' Name='Conferma_Ordine' />
                             <input type="hidden" Value=<?php echo"$totale"?> Name='prezzototale' />
 
                         </form>
                     <?php } ?>
                         <br/>
-                    <h3>I miei ordini</h3>
+                    <h3>Previous orders</h3>
                     
                     <table id="carrello" class="table table-striped">
                         <thead>
                             <tr style="font-weight: 600;">
                                 <td>ID</td>
                                 <td>Data</td>
-                                <td>Indirizzo</td>
-                                <td>Carta Utilizzata</td>
-                                <td>Stato</td>
+                                <td>Address</td>
+                                <td>Payment details</td>
+                                <td>Status</td>
                             </tr>
                         </thead>
                         <tbody>
