@@ -95,17 +95,16 @@
     <span id="index_frameworks"></span>
 
     <div class="image" id="wall_works" data-stellar-background-ratio="0.2"></div>
-    <div class="content" id="content_works" style="">
+    <div class="content" id="content_works">
         <div class="title">Websites</div>
-        <br><br>
-        <div class="col-xl-12" style="max-width:1280px; margin: auto;">
+        <div class="col-xl-12 websites">
             <a href="Works/ImageVault/index.php">
-                <div class="col-md-4 col-md-offset-1 workImage" style="border: 1px #acacac solid;">
+                <div class="col-md-4 col-md-offset-1 workImage">
                     <img class="websiteImage" src="img/vault.jpg" alt="">
                 </div>
             </a>
             <a href="Works/Laboa/atrium.php">
-                <div class="col-md-4 col-md-offset-2 workImage" style="border: 1px #acacac solid;">
+                <div class="col-md-4 col-md-offset-2 workImage">
                     <img class="websiteImage" src="img/laboa.png" alt="">
                 </div>
             </a>
@@ -114,17 +113,17 @@
             <div class="col-md-4 col-md-offset-2 imageLink"><a href="Works/Laboa/atrium.php"><p>Laboa.org</p></a></div>
             <div class="col-md-12"><br></div>
             <a href="Works/Technology4u/atrium.php">
-                <div class="col-md-4 col-md-offset-1 workImage" style="border: 1px #acacac solid;">
+                <div class="col-md-4 col-md-offset-1 workImage">
                     <img class="websiteImage" src="img/tech4u.jpg">
                 </div>
             </a>
-            <div class="col-md-4 col-md-offset-2 workImage" style="border: 1px #acacac solid;">
+            <div class="col-md-4 col-md-offset-2 workImage">
                 <img class="websiteImage" src="img/8.jpg" alt="">
             </div>
             <div class="col-md-4 col-md-offset-1 imageLink"><a href="Works/Technology4u/atrium.php"><p>Technoloy4u</p>
                 </a></div>
             <div class="col-md-4 col-md-offset-2 imageLink">
-                <p>sito</p>
+                <p>EasyRetrieve</p>
             </div>
         </div>
         <div class="clearfix">
@@ -208,3 +207,4 @@
 
 </body>
 </html>
+
