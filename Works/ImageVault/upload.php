@@ -48,7 +48,7 @@ if ($user->isLoggedIn()) {
             UploadFile::eliminaImmagine($filename);
         }
     }
-
+echo '<br>';
 //    Show images
     if (isset($_POST['show'])) {
 

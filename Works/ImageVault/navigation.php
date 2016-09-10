@@ -37,7 +37,7 @@ require_once 'inc/init.php';
     <link rel="stylesheet" type="text/css" href="../../include/lightbox/dist/css/lightbox.min.css">
 
 </head>
-<body>
+<body >
 
 
 <!--CSS-->
@@ -217,7 +217,6 @@ require_once 'inc/init.php';
         .navbar-brand{display: none;}
      }
  --></style>
-<br>
 
 
 
