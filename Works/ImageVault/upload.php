@@ -106,7 +106,7 @@ if ($user->isLoggedIn()) {
         echo '
                     <div class="clearfix"></div><br>
                         <form action="upload.php" method="POST">                
-                            <input type="submit" class="btn btn-outline-primary" name="indietro" value="Indietro">
+                            <input type="submit" class="btn btn-outline-primary" name="back" value="Back">
                         </form>     
                     </div>
                     <div class="clearfix"></div><br>
