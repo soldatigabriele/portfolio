@@ -56,7 +56,7 @@ if ($user->isLoggedIn()) {
             <div class="col-md-12" style="background:">
                 <div class="col-md-12">
                     <form action="upload.php" method="POST">                
-                        <input type="submit" class="btn btn-outline-primary" name="back" value="Back">
+                        <input type="submit" class="btn btn-outline-gray" name="back" value="Back">
                     </form>
                 </div>
                 <div class="clearfix"></div><br>
@@ -106,7 +106,7 @@ if ($user->isLoggedIn()) {
         echo '
                     <div class="clearfix"></div><br>
                         <form action="upload.php" method="POST">                
-                            <input type="submit" class="btn btn-outline-primary" name="back" value="Back">
+                            <input type="submit" class="btn btn-outline-gray" name="back" value="Back">
                         </form>     
                     </div>
                     <div class="clearfix"></div><br>
@@ -123,7 +123,7 @@ if ($user->isLoggedIn()) {
             <div class="group col-md-4">
                 <div class="col-md-12">
                     <form action="index.php" method="POST">
-                        <input type="submit" class="showImage btn btn-outline-primary" name="back" value="Back">
+                        <input type="submit" class="showImage btn btn-outline-gray" name="back" value="Back">
                     </form>
                 </div>
                 <div class="clearfix"></div>

@@ -11,7 +11,7 @@
                             <ul><a href="carrello.php">Orders</a></ul>
                             <ul><a href="cartacredito.php">Credit Cards</a></ul>
                             <ul><a href="home.php">Control Panel</a></ul>
-
+                            <ul><a href="atrium.php">Portfolio</a></ul>
                         </li>
                     </div>
                     <div class="col-md-4"></div>

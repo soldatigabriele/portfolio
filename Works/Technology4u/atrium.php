@@ -46,7 +46,7 @@ if ($user->isLoggedIn()) {
 
 <div class="col-md-12">
 
-    Ecommerce website with an advanced login system with secure password and user details storage, including credit
+    E-commerce website with an advanced login system with secure password and user details storage, including credit
     cards and ID/Passport scans
     <ul style="">
         <li>Login and registering with eMail verification</li>
@@ -56,6 +56,7 @@ if ($user->isLoggedIn()) {
         <li>Brute Force Attacks protection using Captcha after failed 3 login attempts</li>
         <li>Secure images storage with name and content encryption</li>
         <li>Change password functionality</li>
+        <li>Shopping cart with promotional codes</li>
     </ul>
 </div>
 
