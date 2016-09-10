@@ -50,7 +50,7 @@
     <div class="content" id="content_about">
         <div class="title">WHO AM I</div>
         <div class="description">
-            <p>I am a back-end developer graduate of Internet Technology</p>
+            <p>I am a graduate back-end developer</p>
             <p>I like to challenge myself and I love to learn!</p>
         </div>
 

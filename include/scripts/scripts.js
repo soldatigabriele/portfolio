@@ -39,8 +39,6 @@ function setBindings() {
         $('#slide1').on('appear', function () {
             function removeClass() {
                 if ($('#slide' + n).hasClass('transparent')) {
-                    $("#slide" + n).mouseover(function(){$(this).fadeTo(200,0.3);});
-                    $("#slide" + n).mouseout(function(){$(this).fadeTo(200,1);});
                     $("#slide" + n).fadeTo("slow", 1, function(){
                         n = n + 1;
                         removeClass();
