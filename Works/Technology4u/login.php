@@ -141,7 +141,7 @@ require_once 'navigation.php';
                 <div class="col-md-6 <?php if ($errorCodice) {
                     echo 'has-error';
                 } ?>" style="vertical-align: middle; padding-top:10px;">
-                    <label for='codiceTempo'>Codice</label>
+                    <label for='codiceTempo'>Time Code</label>
                     <input class="form-control" type="text" maxlength="5" name="codiceTempo"
                            value="<?php echo escape(Input::get('codice')); ?>"
                            id="codiceTempo" <?php if ($codiceRequired) {
@@ -150,14 +150,13 @@ require_once 'navigation.php';
                 </div>
                 <div class="col-md-6"><br></div>
                 <div class="col-md-6 spacing" style="padding: 20px 0px 0px 15px;">
-                    <a href="codicetempo.php?username=" id="linkCodiceTempo" onclick="myFunction()"> &#8594; codice a
-                        tempo</a>
+                    <a href="codicetempo.php?username=" id="linkCodiceTempo" onclick="myFunction()"> &#8594;time code </a>
                 </div>
 
                 <div class="col-md-12" style="padding-top:10px;">
-                    <div><label for="gg">Data di nascita: </label></div>
+                    <div><label for="gg">Date of birth:</label></div>
                     <div class=" col-md-4">
-                        Giorno <select class="form-control" name="gg">
+                        Day <select class="form-control" name="gg">
                             <option value=""> -</option>
                             <?php
                             for ($i = 1; $i < 32; $i++) {
@@ -166,7 +165,7 @@ require_once 'navigation.php';
                         </select>
                     </div>
                     <div class=" col-md-4">
-                        Mese <select class="form-control" name="mm">
+                        Month <select class="form-control" name="mm">
                             <option value=""> -</option>
                             <?php
                             for ($i = 1; $i < 13; $i++) {
@@ -175,7 +174,7 @@ require_once 'navigation.php';
                         </select>
                     </div>
                     <div class=" col-md-4">
-                        Anno<select class="form-control" name="yy">
+                        Year<select class="form-control" name="yy">
                             <option value=""> -</option>
                             <?php
                             for ($i = 2017; $i > 1900; $i--) {
@@ -195,11 +194,11 @@ require_once 'navigation.php';
                 <?php } ?>
                 <div class="clearfix"></div>
                 <div class="col-md-8" style="padding-top:10px;">
-                    <label for="remember">Ricordami</label>
+                    <label for="remember">Remember me</label>
                     <input type="checkbox" name="remember" id="remember">
                 </div>
                 <div class="col-md-12" style="padding-top:20px;">
-                    <input type="submit" class="form-control btn btn-success" value="Accedi">
+                    <input type="submit" class="form-control btn btn-success" value="Login">
                 </div>
             </div>
         </form>

@@ -149,12 +149,12 @@ require_once 'navigation.php';
                     <input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
 
                     <div class="field  col-md-6 <?php if($errorNome){echo 'has-error';}?>" style="padding-top:10px;">
-                        <label for="nome">Nome:</label>
+                        <label for="nome">Name:</label>
                         <input class="form-control" type="text" <?php if($NomeRequired){echo 'placeholder="required"';}?> name="nome" value="<?php echo escape(Input::get('nome')); ?>" id="name">
                     </div>
 
                     <div class="field col-md-6 <?php if($errorCognome){echo 'has-error';}?>" style="padding-top:10px;">
-                        <label for="cognome">Cognome:</label>
+                        <label for="cognome">Surname:</label>
                         <input class="form-control" type="text" <?php if($CognomeRequired){echo 'placeholder="required"';}?> name="cognome" id="cognome" value="<?php echo escape(Input::get('cognome')); ?>">
                     </div>
 
@@ -169,14 +169,14 @@ require_once 'navigation.php';
                     </div>
 
                     <div class="col-md-6 <?php if($errorCf){echo 'has-error';}?>"  style="padding-top:30px;">
-                        <label for="codicefiscale">Codice Fiscale: </label>
+                        <label for="codicefiscale">NIN: </label>
                         <input  class="form-control" type="text" <?php if($cfRequired){echo 'placeholder="required"';}?> maxlength="16" name="codicefiscale" id="codicefiscale" value="<?php echo escape(Input::get('codicefiscale')); ?>">
                     </div>
 
                     <div class="col-md-6 <?php if($errorData){echo 'has-error';}?>"  style="padding-top:10px;">
-                        <div><label for="gg">Data di nascita: </label></div>
+                        <div><label for="gg">Date of birth: </label></div>
                         <div class=" col-md-4">
-                            Giorno <select class="form-control" name="gg">
+                            Day<select class="form-control" name="gg">
                                 <option value=""> - </option>
                                 <?php
                                     for ($i=1;$i<32;$i++) {
@@ -185,7 +185,7 @@ require_once 'navigation.php';
                             </select>
                         </div>
                         <div class="col-md-4">
-                            Mese <select class="form-control" name="mm">
+                            Month <select class="form-control" name="mm">
                                 <option value=""> - </option>
                                 <?php
                                     for ($i=1;$i<13;$i++) {
@@ -194,7 +194,7 @@ require_once 'navigation.php';
                             </select>
                         </div>
                         <div class=" col-md-4">
-                            Anno<select class="form-control" name="yy">
+                            Year<select class="form-control" name="yy">
                                 <option value=""> - </option>
                                 <?php
                                     for ($i=2017;$i>1900;$i--) {
@@ -210,12 +210,12 @@ require_once 'navigation.php';
                     </div>
 
                     <div class="col-md-6 <?php if($errorConfPass){echo 'has-error';}?>" style="padding-top:10px;">
-                        <label for="confermapassword">Conferma Password:</label>
+                        <label for="confermapassword">Repeat Password:</label>
                         <input class="form-control" type="password" <?php if($confPasswordRequired){echo 'placeholder="required"';}?> name="confermapassword" id="confermapassword" value="">
                     </div>
                     <div class="col-md-12"><br><br></div>
                     <div class="col-md-6">
-                        <input class="form-control btn btn-success" type="submit" value="Registrati">
+                        <input class="form-control btn btn-success" type="submit" value="Sign Up">
                     </div>
 
                 </form>

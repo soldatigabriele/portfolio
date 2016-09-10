@@ -14,7 +14,7 @@ require_once 'inc/init.php';
                 <div class="clearfix"></div>
                 <br>
                 <div class="col-md-6">
-                    <input class="form-control btn btn-success" type="submit" value="Genera Codice">
+                    <input class="form-control btn btn-success" type="submit" value="Generate Code">
                 </div>
             </div>
         </form>
@@ -32,9 +32,9 @@ require_once 'inc/init.php';
             $id = $user->data()->idUtente;
             $code = TimeCode::getTime($id);
             echo ' <div class="clearfix"></div><br>';
-            echo '<div class="col-md-6"> Codice a tempo: <h2 id="codiceGenerato">' . $code . '</h2></div>';
+            echo '<div class="col-md-6"> Time Code: <h2 id="codiceGenerato">' . $code . '</h2></div>';
             echo ' <div class="clearfix"></div><br>';
-            echo '<div class="col-md-6"> Il codice per l\'account <b>' . escape(Input::get('username')) . ' </b> vale ancora per:<p style="font-weight:800;font-size:16px;"><span id="timerMin"></span><span id="timerSec"></span></p></div>';
+            echo '<div class="col-md-6"> Expires in: <p style="font-weight:800;font-size:16px;"><span id="timerMin"></span><span id="timerSec"></span></p></div>';
         }
     }
     ?>
@@ -44,7 +44,7 @@ require_once 'inc/init.php';
                 <div class="field">
                     <input type="hidden" name="username" value="<?php echo escape(Input::get('username'));?>">
                     <input type="hidden" id="codice" name="codice" value="">
-                    <input class="form-control btn btn-success" onclick="getCode()" type="submit" value="Indietro" name="indietro" style="margin-left:15px;">
+                    <input class="form-control btn btn-success" onclick="getCode()" type="submit" value="Back" name="indietro" style="margin-left:15px;">
                 </div>
             </form>
         </div>
@@ -57,8 +57,8 @@ echo date('H-i-s'); ?>
 <script>
     function myTimer() {
         var d = new Date();
-        document.getElementById("timerMin").innerHTML = (Math.ceil(d.getMinutes() / 10) * 10) - d.getMinutes()-1 + " minuti e ";
-        document.getElementById("timerSec").innerHTML = 60 - (d.getSeconds()) + " secondi";
+        document.getElementById("timerMin").innerHTML = (Math.ceil(d.getMinutes() / 10) * 10) - d.getMinutes()-1 + " minutes and ";
+        document.getElementById("timerSec").innerHTML = 60 - (d.getSeconds()) + " seconds";
     }
 
 

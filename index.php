@@ -114,7 +114,7 @@
             <div class="col-md-4 col-md-offset-2 workImage"style="border: 1px #acacac solid;">
                 <img src="img/8.jpg" alt="">
             </div>
-            <div class="col-md-4 col-md-offset-1 workImage"><a href="Works/Technology4u/index.php"><p>Technoloy4u</p></a></div>
+            <div class="col-md-4 col-md-offset-1 workImage"><a href="Works/Technology4u/atrium.php"><p>Technoloy4u</p></a></div>
             <div class="col-md-4 col-md-offset-2 workImage">
                 <p>sito</p>
             </div>
