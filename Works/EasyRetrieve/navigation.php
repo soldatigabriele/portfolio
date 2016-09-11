@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <!-- <meta name="author" content="ScappinDebora&SoldatiGabriele">-->
 
-    <title>ImageVault</title>
+    <title>EasyRetrieve</title>
 
     <!-- Normalize CSS -->
     <link href="css/normalize.css" rel="stylesheet">

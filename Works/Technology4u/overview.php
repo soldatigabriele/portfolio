@@ -33,7 +33,7 @@
 </head>
 
 
-<div class="col-md-12" style="background:#05cbf8;padding:20px">
+<div class="col-md-12" style="background:#222222;padding:20px">
     <div class="col-md-6 offset-md-3" style="background:white;border-radius: 25px;padding:20px">
         <div class="col-md-12">
             <h2>Technology4U</h2>

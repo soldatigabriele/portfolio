@@ -44,6 +44,25 @@ require_once('navigation.php');
         </div>
         <div class="col-md-12 clearfix"><br></div>
         <div class="col-md-8 offset-md-2">
+            <div class="col-md-12 offset-md-2">
+                <h3>Try it!</h3>
+            </div>
+            <div class="col-md-12" style="border:1px solid #acacac;">
+                <div class="clearfix"><br></div>
+                <div class="offset-md-2">
+                    <img src="../../img/ER.jpg" alt="" style="max-width:220px;">
+                </div>
+                <div class="clearfix"><br></div>
+                <div class="col-md-12">
+                        <form action="http://www.gabrielesoldati.altervista.org/gabrielesoldati/streetview/login/index.php" method="POST">
+                            <input type="submit"
+                                   class="showImage btn btn-block btn-outline-primary"
+                                   name="Upload" value="Go to EasyRetrieve">
+                        </form>
+                        <div class="clearfix"><br></div>
+                </div>
+            </div>
+            <div class="col-md-12 clearfix"><br></div>
             <form action="../../index.php" method="POST"><input type="submit"
                                                                 class="showImage btn btn-block btn-outline-gray"
                                                                 name="" value="Back to the Portfolio"></form>
