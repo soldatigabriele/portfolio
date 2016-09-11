@@ -98,7 +98,7 @@
     <div class="content" id="content_works">
         <div class="title">Websites</div>
         <div class="col-xl-12 websites">
-            <a href="Works/ImageVault/index.php">
+            <a href="Works/ImageVault/overview.php">
                 <div class="col-md-4 col-md-offset-1 workImage">
                     <img class="websiteImage" src="img/vault.jpg" alt="">
                 </div>
@@ -108,8 +108,7 @@
                     <img class="websiteImage" src="img/laboa.png" alt="">
                 </div>
             </a>
-            <div class="col-md-4 col-md-offset-1 imageLink"><a href="Works/ImageVault/index.php"><p>ImageVault</p></a>
-            </div>
+            <div class="col-md-4 col-md-offset-1 imageLink"><a href="Works/ImageVault/overview.php"><p>ImageVault</p></a> </div>
             <div class="col-md-4 col-md-offset-2 imageLink"><a href="Works/Laboa/overview.php"><p>Laboa.org</p></a></div>
             <div class="col-md-12"><br></div>
             <a href="Works/Technology4u/overview.php">
@@ -119,19 +118,11 @@
             </a>
             <a href="Works/EasyRetrieve/overview.php">
                 <div class="col-md-4 col-md-offset-2 workImage">
-                    <img class="websiteImage" src="img/easyRetrieve.png" alt="">
+                    <img class="websiteImage" src="img/ER.jpg" alt="">
                 </div>
             </a>
-            <div class="col-md-4 col-md-offset-1 imageLink">
-                <a href="Works/Technology4u/overview.php">
-                    <p>Technoloy4u</p>
-                </a>
-            </div>
-            <div class="col-md-4 col-md-offset-2 imageLink">
-                <a href="Works/EasyRetrieve/overview.php">
-                    <p>EasyRetrieve</p>
-                </a>
-            </div>
+            <div class="col-md-4 col-md-offset-1 imageLink"> <a href="Works/Technology4u/overview.php"> <p>Technoloy4u</p> </a> </div>
+            <div class="col-md-4 col-md-offset-2 imageLink"> <a href="Works/EasyRetrieve/overview.php"> <p>EasyRetrieve</p> </a> </div>
         </div>
     </div>
     <span id="index_works"></span>

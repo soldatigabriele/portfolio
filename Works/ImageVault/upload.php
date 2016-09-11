@@ -122,7 +122,7 @@ echo '<br>';
 
             <div class="group col-md-4">
                 <div class="col-md-12">
-                    <form action="index.php" method="POST">
+                    <form action="overview.php" method="POST">
                         <input type="submit" class="showImage btn btn-outline-gray" name="back" value="Back">
                     </form>
                 </div>
@@ -169,6 +169,6 @@ echo '<br>';
     include 'footer.php';
 // se l'utente non è loggato lo reindirizzo
 } else {
-    echo 'Go to the <a href="index.php">login</a> page';
-    Header('Location: index.php');
+    echo 'Go to the <a href="overview.php">login</a> page';
+    Header('Location: overview.php');
 }

@@ -1,13 +1,3 @@
-<?php
-require_once('inc/init.php');
-
-if (!$user->isLoggedIn()) {
-    $user = new User('Gabriele');
-    $user->login();
-//    Redirect::to('index.php');
-}
-if ($user->isLoggedIn()) {
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,7 +60,7 @@ if ($user->isLoggedIn()) {
             <div class="clearfix"><br></div>
             <div class="col-md-12">
                 <div class="col-md-12">
-                    <form action="index.php" method="POST">
+                    <form action="http://technology4u.altervista.org/index.php" method="POST">
                         <input type="submit"
                                class="btn btn-block btn-outline-primary"
                                name="website" value="Go to the website">
@@ -90,7 +80,6 @@ if ($user->isLoggedIn()) {
     </div>
 
 </div>
-<?php } ?>
 
 </body>
 </html>
