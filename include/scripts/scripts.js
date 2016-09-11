@@ -69,5 +69,31 @@ function setBindings() {
             opacity:1,
         }, 300);
         });
-    })
-;
+
+        // change color icons
+        $(function(){
+            $('#imgInsta').hover(
+                function(){ $('#imgInsta').attr('src','img/cont_instagramR.png'); },
+                function(){ $('#imgInsta').attr('src','img/cont_instagram.png'); }
+            );
+        });
+        $(function(){
+            $('#imgFace').hover(
+                function(){ $('#imgFace').attr('src','img/cont_facebookR.png'); },
+                function(){ $('#imgFace').attr('src','img/cont_facebook.png'); }
+            );
+        });
+        $(function(){
+            $('#imgGit').hover(
+                function(){ $('#imgGit').attr('src','img/githubR.png'); },
+                function(){ $('#imgGit').attr('src','img/github.png'); }
+            );
+        });
+        $(function(){
+            $('#imgLink').hover(
+                function(){ $('#imgLink').attr('src','img/cont_linkedinR.png'); },
+                function(){ $('#imgLink').attr('src','img/cont_linkedin.png'); }
+            );
+        });
+
+    });

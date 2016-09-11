@@ -60,9 +60,16 @@ a:active{color:lightslategray;text-decoration:none;}
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
-
 }
-
+.frameworkDescription{
+    vertical-align: middle;
+    margin-top: 10%;
+    margin-left:150px;
+}
+.frameworkTitle{
+    font-size:64px;
+    margin-left:150px;
+}
 .workImage{
     /*height: 20vh;*/
     width:360px;
@@ -92,6 +99,7 @@ border: 1px #acacac solid;
     width:100%;
     background-image: url("../../img/bg2.png");
     background-size:90% ;
+    background-position: center;
     background-repeat:no-repeat;
 }
 

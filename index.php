@@ -86,8 +86,8 @@
 
     <div class="image" id="wall_frameworks" data-stellar-background-ratio="0.2"></div>
     <div class="content" id="content_frameworks">
-        <div class="title">Laravel 5</div>
-        <div class="description">
+        <div class="frameworkTitle">Laravel 5</div>
+        <div class="frameworkDescription">
             <p>Laravel is my favourite PHP Framework!</p>
             <p>It makes everything easier and faster!</p>
         </div>
@@ -96,7 +96,7 @@
 
     <div class="image" id="wall_works" data-stellar-background-ratio="0.2"></div>
     <div class="content" id="content_works">
-        <div class="title">Websites</div>
+        <div class="title">Some of my works...</div>
         <div class="col-xl-12 websites">
             <a href="Works/ImageVault/overview.php">
                 <div class="col-md-4 col-md-offset-1 workImage">
@@ -174,22 +174,22 @@
         <div class="col-md-4">
             <a href="https://www.facebook.com/gbrlit">
                 <div class="col-md-1 col-md-offset-4">
-                    <img src="img/cont_facebook.png" width="20px" alt="">
+                    <img id="imgFace" src="img/cont_facebook.png" width="20px" alt="">
                 </div>
             </a>
             <a href="https://www.instagram.com/gabrielesoldati/">
                 <div class="col-md-1">
-                    <img src="img/cont_instagram.png" width="20px" height="20px" alt="">
+                    <img id="imgInsta" src="img/cont_instagram.png" width="20px" height="20px" alt="">
                 </div>
             </a>
             <a href="http://https://github.com/soldatigabriele">
                 <div class="col-md-1">
-                    <img src="img/githubW.png" width="20px" alt="">
+                    <img id="imgGit" src="img/github.png" width="20px" alt="">
                 </div>
             </a>
             <a href="https://www.linkedin.com/in/gabriele-soldati-4a3992aa?trk=nav_responsive_tab_profile_pic">
                 <div class="col-md-1">
-                    <img src="img/cont_linkedin.png" width="20px" alt="">
+                    <img id="imgLink" src="img/cont_linkedin.png" width="20px" alt="">
                 </div>
             </a>
         </div>
