@@ -6,8 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
     <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="include/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="include/css/stylesheet.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -23,7 +22,7 @@
     </noscript>
     <script src="include/jquery.appear/jquery.appear.js"></script>
     <!--    end image Grid css  -->
-    <!--    inizialize parallax effect-->
+<!--        inizialize parallax effect-->
     <script>
         $(document).ready(function () {
             $(window).stellar();
