@@ -36,7 +36,7 @@
     <nav>
         <a id="about" href="#">About Me</a> |
         <a id="web" href="#">Skills</a> |
-        <a id="frameworks" href="#">Frameworks</a> |
+<!--        <a id="frameworks" href="#">Frameworks</a> |-->
         <a id="works" href="#">Websites</a> |
         <a id="flickr" href="#">Flickr</a> |
         <a id="contacts" href="#">Contacts</a>
@@ -62,7 +62,7 @@
         <div class="description">
             <p>Strong PHP and OOP coding skills</p>
             <p>I also like to code in Javascript, NodeJS and jQuery</p>
-            <p>I love GITHUB and VIM too!</p>
+            <p>I use GITHUB and I love Laravel!</p>
         </div>
         <div class="images">
             <div class="col-md-10 col-md-offset-1 logos">
@@ -83,23 +83,23 @@
     </div>
     <span id="index_web"></span>
 
-    <div class="image" id="wall_frameworks" data-stellar-background-ratio="0.2"></div>
-    <div class="content" id="content_frameworks">
-        <div class="frameworkTitle">Laravel 5</div>
-        <div class="frameworkDescription">
-            <p>Laravel is my favourite PHP Framework!</p>
-            <p>It makes everything easier and faster!</p>
-        </div>
-    </div>
-    <span id="index_frameworks"></span>
+<!--    <div class="image" id="wall_frameworks" data-stellar-background-ratio="0.2"></div>-->
+<!--    <div class="content" id="content_frameworks">-->
+<!--        <div class="frameworkTitle">Laravel 5</div>-->
+<!--        <div class="frameworkDescription">-->
+<!--            <p>Laravel is my favourite PHP Framework!</p>-->
+<!--            <p>It makes everything easier and faster!</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <span id="index_frameworks"></span>-->
 
     <div class="image" id="wall_works" data-stellar-background-ratio="0.2"></div>
     <div class="content" id="content_works">
         <div class="title">Some of my works...</div>
         <div class="col-xl-12 websites">
-            <a href="Works/ImageVault/overview.php">
+            <a href="Works/EasyRetrieve/overview.php">
                 <div class="col-md-4 col-md-offset-1 workImage">
-                    <img class="websiteImage" src="img/vault.jpg" alt="">
+                    <img class="websiteImage" src="img/ER.jpg" alt="">
                 </div>
             </a>
             <a href="Works/Laboa/overview.php">
@@ -107,7 +107,7 @@
                     <img class="websiteImage" src="img/laboa.png" alt="">
                 </div>
             </a>
-            <div class="col-md-4 col-md-offset-1 imageLink"><a href="Works/ImageVault/overview.php"><p>ImageVault</p></a> </div>
+            <div class="col-md-4 col-md-offset-1 imageLink"> <a href="Works/EasyRetrieve/overview.php"> <p>EasyRetrieve</p> </a> </div>
             <div class="col-md-4 col-md-offset-2 imageLink"><a href="Works/Laboa/overview.php"><p>Laboa.org</p></a></div>
             <div class="col-md-12"><br></div>
             <a href="Works/Technology4u/overview.php">
@@ -115,13 +115,13 @@
                     <img class="websiteImage" src="img/tech4u.jpg">
                 </div>
             </a>
-            <a href="Works/EasyRetrieve/overview.php">
+            <a href="Works/ImageVault/overview.php">
                 <div class="col-md-4 col-md-offset-2 workImage">
-                    <img class="websiteImage" src="img/ER.jpg" alt="">
+                    <img class="websiteImage" src="img/vault.jpg" alt="">
                 </div>
             </a>
             <div class="col-md-4 col-md-offset-1 imageLink"> <a href="Works/Technology4u/overview.php"> <p>Technoloy4u</p> </a> </div>
-            <div class="col-md-4 col-md-offset-2 imageLink"> <a href="Works/EasyRetrieve/overview.php"> <p>EasyRetrieve</p> </a> </div>
+            <div class="col-md-4 col-md-offset-2 imageLink"><a href="Works/ImageVault/overview.php"><p>ImageVault</p></a> </div>
         </div>
     </div>
     <span id="index_works"></span>
@@ -181,7 +181,7 @@
                     <img id="imgInsta" src="img/cont_instagram.png" width="20px" height="20px" alt="">
                 </div>
             </a>
-            <a href="http://https://github.com/soldatigabriele">
+            <a href="https://github.com/soldatigabriele">
                 <div class="col-md-1">
                     <img id="imgGit" src="img/github.png" width="20px" alt="">
                 </div>
