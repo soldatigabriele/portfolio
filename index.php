@@ -38,7 +38,7 @@
         <a id="web" href="#">Skills</a> |
 <!--        <a id="frameworks" href="#">Frameworks</a> |-->
         <a id="works" href="#">Websites</a> |
-        <a id="flickr" href="#">Flickr</a> |
+        <a id="flickr" href="#">Web Services</a> |
         <a id="contacts" href="#">Contacts</a>
     </nav>
 </div>
@@ -130,8 +130,8 @@
 
     <div class="image" id="wall_flickr" data-stellar-background-ratio="0.2"></div>
     <div class="content" id="content_flickr">
-        <div class="title">Flickr</div>
-        <p>Flickr's APIs are awesome!</p>
+        <div class="title">Web Services</div>
+        <p>I like to work with REST Services: I have experience with Flickr's, Google and Instagram APIs</p>
         <div class="col-md-12 imageThumbnail">
             <?php
             $image = new Flickr();
