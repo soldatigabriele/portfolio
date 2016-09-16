@@ -51,37 +51,29 @@ require_once('navigation.php');
                 <img src="inc/img/2.png" class="image" alt="">
             </div>
         </div>
-        <div class="col-md-12 clearfix"><br></div>
-
-        <div style="width:450px;margin:auto;">
+        <div class="col-md-12 clearfix"><br><br><br></div>
+        <div class="col-md-8 offset-md-2">
             <div class="col-md-12" style="border:1px solid #acacac;">
                 <div class="clearfix"><br></div>
-                <div class="offset-md-3">
+                <div class="offset-md-2">
                     <img src="../../img/laboa.png" alt="" style="max-width:220px;">
+
                 </div>
                 <div class="clearfix"><br></div>
                 <div class="col-md-12">
-                    <div class="col-md-12">
-                        <form action="http://www.laboa.org" method="POST">
-                            <input type="submit"
-                                   class="showImage btn btn-block btn-outline-primary"
-                                   name="Laboa" value="Go to Laboa.org">
-                        </form>
-                        <div class="clearfix"><br></div>
-                    </div>
+                    <form action="http://www.laboa.org" method="POST">
+                        <input type="submit"
+                               class="showImage btn btn-block btn-outline-primary"
+                               name="Upload" value="Go to LaBoa.org">
+                    </form>
+                    <div class="clearfix"><br></div>
                 </div>
             </div>
-
-        </div>
-
-        <div class="col-md-12 clearfix"><br></div>
-        <div class="col-md-8 offset-md-2">
+            <div class="col-md-12 clearfix"><br></div>
             <form action="../../index.php" method="POST"><input type="submit"
                                                                 class="showImage btn btn-block btn-outline-gray"
                                                                 name="" value="Back to the Portfolio"></form>
         </div>
-
-    </div>
 
 </div>
 

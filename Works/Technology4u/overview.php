@@ -34,13 +34,14 @@
 
 
 <div class="col-md-12" style="background:#222222;padding:20px">
-    <div class="col-md-6 offset-md-3" style="background:white;border-radius: 25px;padding:20px">
+    <div class="col-md-6 offset-md-3 offset-xl-3 col-xl-6"
+         style="width:600px;background:white;border-radius: 25px;padding:50px 20px 50px 20px;">
         <div class="col-md-12">
-            <h2>Technology4U</h2>
+            <span style="text-align:center;"><h2>Technology4U</h2></span><br>
             E-commerce website with an advanced login system with secure password and user details storage, including
             credit
             cards and ID/Passport scans
-            <ul style="">
+            <ul>
                 <li>Login and registering with eMail verification</li>
                 <li>Remember me feature</li>
                 <li>High secure password storage using salt and SHA256 algorithm</li>
@@ -51,32 +52,29 @@
                 <li>Shopping cart with promotional codes</li>
             </ul>
         </div>
+        <div class="clearfix"><br></div>
+        <div class="col-md-8 offset-md-2">
+            <div class="col-md-12" style="background:#fff;border:1px solid #acacac;">
+                <div class="clearfix"><br></div>
+                <div class="offset-md-2">
+                    <img src="../../img/tech4u.jpg" alt="" style="opacity:0.8;max-width:220px;">
 
-        <div class="col-md-12" style="border:1px solid #acacac;">
-            <div class="clearfix"><br></div>
-            <div class="">
-                <img src="../../img/tech4u.jpg" alt="" style="width:100%">
-            </div>
-            <div class="clearfix"><br></div>
-            <div class="col-md-12">
+                </div>
+                <div class="clearfix"><br></div>
                 <div class="col-md-12">
                     <form action="http://technology4u.altervista.org/index.php" method="POST">
                         <input type="submit"
-                               class="btn btn-block btn-outline-primary"
-                               name="website" value="Go to the website">
+                               class="showImage btn btn-block btn-outline-primary"
+                               name="Upload" value="Go to the website">
                     </form>
                     <div class="clearfix"><br></div>
                 </div>
             </div>
-        </div>
-
-        <div class="col-md-12 clearfix"><br></div>
-        <div class="col-md-8 offset-md-2">
+            <div class="col-md-12 clearfix"><br></div>
             <form action="../../index.php" method="POST"><input type="submit"
                                                                 class="showImage btn btn-block btn-outline-gray"
                                                                 name="" value="Back to the Portfolio"></form>
         </div>
-
     </div>
 
 </div>

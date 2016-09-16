@@ -2,7 +2,8 @@
 require_once('navigation.php');
 ?>
 <div class="col-md-12" style="background:#438cc1;padding:20px">
-    <div class="col-md-6 offset-md-2 offset-xl-3 col-xl-6" style="width:600px;background:white;border-radius: 25px;padding:50px 20px 50px 20px;">
+    <div class="col-md-6 offset-md-3 offset-xl-3 col-xl-6"
+         style="width:600px;background:white;border-radius: 25px;padding:50px 20px 50px 20px;">
         <div class="col-md-12" style="">
             <div class="col-md-12" style>
                 <span style="text-align: center;"><h2>EasyRetrieve</h2></span>
