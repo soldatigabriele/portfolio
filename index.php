@@ -3,6 +3,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+		<!-- <meta http-equiv="refresh" content="0; url=http://gabrielesoldati.altervista.org/index.html"> -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
     <title>Document</title>
@@ -22,7 +24,7 @@
     </noscript>
     <script src="include/jquery.appear/jquery.appear.js"></script>
     <!--    end image Grid css  -->
-<!--        inizialize parallax effect-->
+    <!--        inizialize parallax effect-->
     <script>
         $(document).ready(function () {
             $(window).stellar();
@@ -36,9 +38,8 @@
     <nav>
         <a id="about" href="#">About Me</a> |
         <a id="web" href="#">Skills</a> |
-<!--        <a id="frameworks" href="#">Frameworks</a> |-->
-        <a id="works" href="#">Websites</a> |
-        <a id="flickr" href="#">Web Services</a> |
+<!--         <a id="works" href="#">Websites</a> |
+ -->        <a id="flickr" href="#">Web Services</a> |
         <a id="contacts" href="#">Contacts</a>
     </nav>
 </div>
@@ -83,55 +84,46 @@
     </div>
     <span id="index_web"></span>
 
-<!--    <div class="image" id="wall_frameworks" data-stellar-background-ratio="0.2"></div>-->
-<!--    <div class="content" id="content_frameworks">-->
-<!--        <div class="frameworkTitle">Laravel 5</div>-->
-<!--        <div class="frameworkDescription">-->
-<!--            <p>Laravel is my favourite PHP Framework!</p>-->
-<!--            <p>It makes everything easier and faster!</p>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <span id="index_frameworks"></span>-->
-
-    <div class="image" id="wall_works" data-stellar-background-ratio="0.2"></div>
+ 
+  <!--   <div class="image" id="wall_works" data-stellar-background-ratio="0.2"></div>
     <div class="content" id="content_works">
-        <div class="title">Some of my works...</div>
-        <div class="col-xl-12 websites">
+        <div class="titleWorks">Some of my works...</div>
+
+    <ul class="photo-grid">
+        <li>
             <a href="Works/EasyRetrieve/overview.php">
-                <div class="col-md-4 col-md-offset-1 workImage">
-                    <img class="websiteImage" src="img/ER.jpg" alt="">
-                </div>
+                <figure>
+                    <img src="img/ER.jpg" height="180" width="320" alt="Arc de Triomphe">
+                    <figcaption><p>EasyRetrieve</p></figcaption>
+                </figure>
             </a>
+        </li>
+        <li>
             <a href="Works/Laboa/overview.php">
-                <div class="col-md-4 col-md-offset-2 workImage">
-                    <img class="websiteImage" src="img/laboa.png" alt="">
-                </div>
+                <figure>
+                    <img src="img/laboa.png" height="180" width="320" alt="Eiffel Tower">
+                    <figcaption><p>LaBoa</p></figcaption>
+                </figure>
             </a>
-            <div class="col-md-4 col-md-offset-1 imageLink"> <a href="Works/EasyRetrieve/overview.php"> <p>EasyRetrieve</p> </a> </div>
-            <div class="col-md-4 col-md-offset-2 imageLink"><a href="Works/Laboa/overview.php"><p>Laboa.org</p></a></div>
-            <div class="col-md-12"><br></div>
-            <a href="Works/Technology4u/overview.php">
-                <div class="col-md-4 col-md-offset-1 workImage">
-                    <img class="websiteImage" src="img/tech4u.jpg">
-                </div>
+        </li>
+        <li><a href="Works/Technology4u/overview.php">
+                <figure>
+                    <img src="img/tech4u.jpg" height="180" width="320" alt="Notre Dame">
+                    <figcaption><p>Technology4U</p></figcaption>
+                </figure>
             </a>
-            <a href="Works/ImageVault/overview.php">
-                <div class="col-md-4 col-md-offset-2 workImage">
-                    <img class="websiteImage" src="img/vault.jpg" alt="">
-                </div>
-            </a>
-            <div class="col-md-4 col-md-offset-1 imageLink"> <a href="Works/Technology4u/overview.php"> <p>Technoloy4u</p> </a> </div>
-            <div class="col-md-4 col-md-offset-2 imageLink"><a href="Works/ImageVault/overview.php"><p>ImageVault</p></a> </div>
-        </div>
+        </li>
+    </ul>
     </div>
-    <span id="index_works"></span>
+
+    <span id="index_works"></span> -->
     <div class="clearfix"></div>
     <br><br>
 
     <div class="image" id="wall_flickr" data-stellar-background-ratio="0.2"></div>
     <div class="content" id="content_flickr">
         <div class="title">Web Services</div>
-        <p>I like to work with REST Services: I have experience with Flickr's, Google and Instagram APIs</p>
+        <p>I like to work with REST Services: I have experience with Flickr, Google and Instagram APIs</p>
         <div class="col-md-12 imageThumbnail">
             <?php
             $image = new Flickr();
@@ -147,26 +139,12 @@
         </div>
 
         <br>
-        <!-- if I remove the first iframe the facebook iframe disappears -->
         <iframe style="display:none;"></iframe>
         <iframe src="https://www.facebook.com/plugins/like.php?href=http://www.uniud.it/&show_faces=false"
                 scrolling="no" frameborder="0" style="border:none; width:400px; height:80px"
                 allowtransparency="true"></iframe>
-        <!--        <iframe src="https://www.facebook.com/plugins/like.php?href=http://www.flickr.com/photos/117888312@N02/&layout=standard&width=450&height=80&show_faces=true&action=like&colorscheme=dark&font=segoe+ui" scrolling="no" frameborder="0" style="border:none; width:450px; height:80px" allowtransparency="true"></iframe>-->
     </div>
     <span id="index_flickr"></span>
-
-
-    <!--    <div class="image" id="wall_hobbies" data-stellar-background-ratio=""></div>-->
-    <!--    <div class="" id="content_hobbies">-->
-    <!--        <div class="photoshop">Photoshop</div>-->
-    <!--    </div>-->
-
-    <!--    <div class="image" id="wall_web" data-stellar-background-ratio="0.5"></div>-->
-    <!--    <div class="content" id="content_web">-->
-    <!--        <div class="title">Photoshop</div>-->
-    <!--    </div>-->
-    <!--    <div class="image" id="wall_contacts" data-stellar-background-ratio="0.2"></div>-->
 
     <div class="content col-md-12" id="content_contacts">
         <div class="col-md-4">soldati.gabriele@gmail.com</div>
