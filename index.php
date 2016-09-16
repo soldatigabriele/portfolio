@@ -38,8 +38,8 @@
     <nav>
         <a id="about" href="#">About Me</a> |
         <a id="web" href="#">Skills</a> |
-<!--         <a id="works" href="#">Websites</a> |
- -->        <a id="flickr" href="#">Web Services</a> |
+        <a id="works" href="#">Websites</a> |
+        <a id="flickr" href="#">Web Services</a> |
         <a id="contacts" href="#">Contacts</a>
     </nav>
 </div>
@@ -84,8 +84,9 @@
     </div>
     <span id="index_web"></span>
 
- 
-  <!--   <div class="image" id="wall_works" data-stellar-background-ratio="0.2"></div>
+
+    <div class="image" id="wall_works" data-stellar-background-ratio="0.2"></div>
+    <span id="index_works"></span>
     <div class="content" id="content_works">
         <div class="titleWorks">Some of my works...</div>
 
@@ -116,7 +117,6 @@
     </ul>
     </div>
 
-    <span id="index_works"></span> -->
     <div class="clearfix"></div>
     <br><br>
 

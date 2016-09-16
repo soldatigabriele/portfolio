@@ -6413,4 +6413,13 @@ a.text-danger:focus, a.text-danger:hover {
     display: none !important;
   }
 }
+.image{
+  margin:auto;
+}
+.divImage {
+  padding: 1px;
+  border: 1px lightgray solid;
+  width: 430px;
+  height: 260px;
+}
 /*# sourceMappingURL=bootstrap.css.map */
